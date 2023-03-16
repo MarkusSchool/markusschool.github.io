@@ -67,32 +67,41 @@
       <!--Otsikko loppu-->
 
       <!--Pizza valikko alku-->
-      <div class="pizza1">
-        <img src="images/fantasia-pizza.jpg" alt="pizza1" height="180px" width="260.4px" />
-        <h2>Fantasia Pizza</h2>
-        <p>Oletko koskaan halunnut syödä pizzaa missä on pelkästään sinun valitsemia täytteitä?<br>
-        Ei tarvitse katsoa pidemmälle, sillä me Makuparatiisissa teemme minkä pitsan sinä ikinä haluat.
-        </p>
-        <div class="shadow">
-          <div class="napit">
-            <button type="button" class="btn">Valitse täytteet</button>
-            <div class="btn1">
-              <div class="plusbtn">
-                <button type="button" class="ympyra" onclick="LisaaPizza('pizza1Kpl')">+</button>
-              </div>
-              <div class="maara">
-                <p class="montako" id="pizza1Kpl">0</p>
-              </div>
-              <div class="miinusbtn">
-                <button type="button" class="miinusympyra" onclick="VahennaPizza('pizza1Kpl')">-</button>
-              </div>
-              <div class="hinta">
-                <p class="hintanum">{0.00}€</p>
+          <div class="pizza1">
+            <img src="images/fantasia-pizza.jpg" alt="pizza1" height="180px" width="260.4px" />
+            <h2>Fantasia Pizza</h2>
+            <p>Oletko koskaan halunnut syödä pizzaa missä on pelkästään sinun valitsemia täytteitä?<br>
+            Ei tarvitse katsoa pidemmälle, sillä me Makuparatiisissa teemme minkä pitsan sinä ikinä haluat.
+            </p>
+            <div class="shadow">
+              <div class="napit">
+                <button type="button" class="btn" onclick="openPopup()">Valitse täytteet</button>
+                  <div class="popup-wrapper">
+                    <div class="popup" id="popup">
+                      <button type="button" class="close-button" onclick="closePopup()">2345</button>
+                      <img src="images/fantasia-pizza.jpg" alt=""/>
+                      <h2>fantasia-pizza</h2>
+                      <p>Voit valita omat täytteet:</p>
+                    </div>
+                  </div>
+                  <script src="js/popup.js"></script>
+                <div class="btn1">
+                  <div class="plusbtn">
+                    <button type="button" class="ympyra" onclick="LisaaPizza('pizza1Kpl')">+</button>
+                  </div>
+                  <div class="maara">
+                    <p class="montako" id="pizza1Kpl">0</p>
+                  </div>
+                  <div class="miinusbtn">
+                    <button type="button" class="miinusympyra" onclick="VahennaPizza('pizza1Kpl')">-</button>
+                  </div>
+                  <div class="hinta">
+                    <p class="hintanum">{0.00}€</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
       <div class="pizza2">
         <img src="images/Pepperoni-pizza1.jpg" alt="pizza2" height="180px" width="260.4px" />
         <h2>Pepperoni</h2>
