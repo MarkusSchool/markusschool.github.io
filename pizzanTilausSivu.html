@@ -80,10 +80,21 @@
                 <button type="button" class="btn" onclick="openPopup()">Valitse täytteet</button>
                   <div class="popup-wrapper">
                     <div class="popup" id="popup">
-                      <button type="button" class="close-button" onclick="closePopup()">&#8249; Takaisin</button>
-                      <img src="images/fantasia-pizza.jpg" alt="fantasia-pizza"/>
-                      <h2>fantasia-pizza</h2>
-                      <p>Voit valita omat täytteet:</p>
+                      <div class="close-buttn">
+                        <button type="button" class="close-button" onclick="closePopup()">&#8249; Takaisin</button>
+                      </div>
+                      <img src="images/fantasia-pizza.jpg" alt=""/>
+                      <div class="popup-header">
+                        <h2>fantasia-pizza</h2>
+                        <div class="popup-info">
+                          <p>Voit valita omat täytteet:</p>
+                        </div>
+                      </div>
+                      <div class="container">
+                        <div class="fantasia-buttn">
+                          <button type="button" onclick="window.location.href='fantasiaPizza.html'" class="to-fantasia">LUO OMA PIZZA</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <script src="js/popup.js"></script>
