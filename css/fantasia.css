@@ -135,3 +135,12 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
+#otsikko {
+    font-size: 40px;
+    text-align: center;
+}
+#valinta {
+    text-align: right;
+    font-size: 20px;
+}
