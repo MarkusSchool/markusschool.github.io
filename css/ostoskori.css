@@ -140,10 +140,36 @@ a.article, a.article:hover {
 .li-ostos {
     height:0;
 }
-
-
 .otsikko {
     font-size: 50px;
     text-align: center;
     margin-top: 110px;
+}
+.tilaa-btn {
+    color: #e30505;
+    border: 1px solid #e30505;
+    border-radius: 5px;
+    padding: 3px 50px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position:absolute;
+    right: 30px;
+    bottom: 230px;
+}
+
+.tilaa-btn:hover .tilaa-button {
+    color: #fff;
+}
+
+.tilaa-btn:hover {
+    background-color: #c90b0b;
+    color: #fff;
+}
+
+.tilaa {
+    font-size: 30px;
+    text-align: right;
+    transform: translate(-50% -50%)
 }
