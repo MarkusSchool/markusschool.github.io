@@ -52,13 +52,13 @@
                     <a href="pizzanTilausSivu.html">Pizzan tilaus</a>
                 </li>
                 <li>
-                    <a href="palaute.html">Anna palautetta</a>
-                </li>
-                <li>
                     <a href="fantasiaPizza.html">Fantasia pizza</a>
                 </li>
-                <li class="li-ostos">
+                <li>
                     <a href="ostoskori.html">Ostoskori</a>
+                </li>
+                <li>
+                    <a href="palaute.html">Anna palautetta</a>
                 </li>
             </ul>
         </nav>
@@ -73,30 +73,41 @@
     </div>
 
     <div class="container">
-
-        <div class="hinta">
-            <h2>Hinta on:</h2>
-            <div class="hinta-sum">
-                <h1></h1>
-            </div>
-        </div>
-        <div class="tilaukset">
+        <div class="teidot">
+          <!-- TIEDOT -->
+          <div class="tilaukset">
             <div class="tilaus-kuvat">
-
-            </div>
-        </div>
-        <div class="kesto">
+                <p>(kuvat menevät tähän)</p>
+          </div>
+          <div class="kesto"> <!-- kuinka kauan tilauksessa kestää-->
             <div class="kesto-otsikko">
-                <h2>Kesto</h2>
+              <h2>Kesto:</h2>
+              <div class="kesto-aika">
+                <h1 id="toimitus-aika"></h1>
+              </div>
             </div>
-            <div class="kesto-info">
-                <p>Tilauksessa kestää noin:</p>
+          </div>
+        </div>
+        <!-- TIEDOT LOPPU -->
+        <div class="tilaa-btn">
+            <div class="tilaa"> 
+              <button type="button" class="tilaa-button">Tilaa</button>
             </div>
+          </div>          
+      </div>
+      <div class="hinta">
+        <h2>Yhteissumma:</h2>
+        <div class="hinta-sum">
+          <h1 id="total-price"></h1>
         </div>
-        <div class="tilaa">
-            <button type="button">Tilaa</button>
+      </div>
+        <div class="tyhjenna">
+          <button type="button" onclick="clearShoppingCart()">Tyhjennä ostoskori</button>
         </div>
-    </div>
+      </div>
+      
+        
+
 
       <!-- footer -->
         <fooetr>
@@ -135,7 +146,7 @@
                         <div class="right_header_info">
                             <ul>
                                 <li class="button_user"><a class="button active" id="kirjauduNappi" href="kirjautuminen.html">Kirjaudu</a><a class="button" id="rekisteroiNappi" href="rekisterointi.html">Rekisteröidy</a><a class="button" id="kirjauduUlosNappi" onclick="ulos()" href="#">Kirjaudu ulos</a></li>
-                                <li id="ostoskori"><button type="button"><img style="margin-right: 5px; margin-left: 5px;" src="images/shopping-cart.jpg" alt="#" width="30" height="30"></button></li>
+                                <li id="ostoskori"><button type="button" onclick="window.location.href='ostoskori.html'"><img style="margin-right: 5px; margin-left: 5px;" src="images/shopping-cart.jpg" alt="#" width="30" height="30"></button></li>
                                 <li>
                                     <button type="button" id="sidebarCollapse">
                                         <img src="images/menu_icon.png" alt="#">
@@ -161,7 +172,9 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/custom.js"></script>
-     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="ostoskori.js"></script>
+    <script src="valmiinPizzanTilausSivu.js"></script>
     
      <script src="js/jquery-3.0.0.min.js"></script>
    <script type="text/javascript">
