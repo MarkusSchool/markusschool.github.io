@@ -151,7 +151,6 @@ function pizzaJuttu(pizzaNimi) {
 
     
     /*
-
     VALMISTUAJAN KAAVAT
 
         Pizzojen valmistumisajan kaava:
