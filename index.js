@@ -101,9 +101,9 @@ function tarkistaSahkoposti() {
         // Lisätään uusi virheilmoitus-elementti sähköpostikentän jälkeen
         sahkopostiInput.parentNode.insertBefore(virheElementti, sahkopostiInput.nextSibling);
   
-        virheElementti.textContent = 'Syötä kelvollinen tyytyväisyyden taso (1-5).';
+        virheElementti.textContent = style="color: red;" 'Syötä kelvollinen tyytyväisyyden taso (1-5).';
       } else {
-        virheilmoitus.textContent = 'Syötä kelvollinen tyytyväisyyden taso (1-5).';
+        virheilmoitus.textContent = style="color: red;"'Syötä kelvollinen tyytyväisyyden taso (1-5).';
       }
     } else {
       // Jos molemmat kentät ovat kelvollisia ja vieressä on virheilmoitus-elementti
