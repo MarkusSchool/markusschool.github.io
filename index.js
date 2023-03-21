@@ -1,6 +1,21 @@
 // Tämä tapahtumankäsittelijä rekisteröidään ajettavaksi, kun DOM on valmis
 document.addEventListener("DOMContentLoaded", onkoKirjautunut);
 
+
+const pizzahinnat = {
+  liha : 12.50,
+  hawaii : 11.00,
+  juusto : 11.30,
+  kasvis : 16.80,
+  bbq : 11.20,
+  tulinen : 12.75,
+  pepperoni : 10.50
+}
+
+let yhteishinta = 0
+
+localStorage.setItem("pizzaArray", JSON.stringify([]))
+
 // Funktio, joka tarkistaa, onko käyttäjä kirjautunut ja piilottaa / näyttää sivuston osia sen mukaan
 function onkoKirjautunut() {
 
@@ -114,8 +129,27 @@ function tarkistaSahkoposti() {
     }
   }  
 
-function pizzaJuttu() {
+function pizzaJuttu(pizzaNimi) {
 
+    const pizzaOgHinta = pizzahinnat[pizzaNimi]
+
+    const maara = localStorage.getItem(`${pizzaNimi}-maara`)
+    const nimi = pizzaNimi
+    const pizzaHinta = maara * pizzaOgHinta
+
+    const kokoPizza = {
+      'määrä' : maara,
+      'nimi' : nimi,
+      'hinta' : pizzaHinta
+    }
+
+    console.log(kokoPizza)
+    
+    const pizzaArray = JSON.parse(localStorage.getItem("pizzaArray"))
+    pizzaArray.push(kokoPizza)
+    localStorage.setItem("pizzaArray", JSON.stringify(pizzaArray))
+
+    
     /*
 
     VALMISTUAJAN KAAVAT

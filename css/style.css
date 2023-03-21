@@ -620,14 +620,14 @@ button {
      border-radius: inherit;
      margin-bottom: 25px;
      padding: 15px 20px;
-     font-family: poppins;
+     font-family: 'poppins', sans-serif;
 }
  .form-control:focus {
      box-shadow: inherit;
      border: #fff solid 2px !important;
 }
  .textarea {
-     font-family: poppins;
+     font-family: 'poppins', sans-serif;
      border: #fff solid 2px;
      margin-bottom: 25px;
      padding: 15px 20px;
