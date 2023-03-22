@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
         kesto += dict.paistumisaika
       });
 
-      console.log(hintayht) //Printataan yhteishinta
+      console.log(hintayht) //Printataan yhteishinta 
 
-      hintayhtHtml.textContent = `Yhteishinta: ${hintayht.toFixed(2)}€`
+      hintayhtHtml.textContent = `Yhteishinta: ${hintayht.toFixed(2)  }€`
       tilausKesto.textContent = `Tilauksessa kestää noin: ${kesto} min.`
 
     }
