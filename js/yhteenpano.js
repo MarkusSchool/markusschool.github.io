@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Päivitetään HTML-elementti tilausKesto
     tilausKesto.textContent = `Tilauksessa kestää noin: ${kestoEsitys}`;
 
+      console.log(hintayht) //Printataan yhteishinta
 
     hintayht = Number(hintayht).toFixed(2)
 
