@@ -124,83 +124,72 @@ a.article, a.article:hover {
     background: #6d7fcc !important;
     color: #fff !important;
 }
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  
 /* --------------------------------------------------- PAGE PICTURE ----------------------------------------------------- */
 .bg {
     display: flex;
-    padding-top: 50px;
-    height: auto;
+    width: 100%;
+    overflow: hidden;
   }
   
-.bg-img {
-    float: left;
-    width: 33.33%;
-    height: auto;
-}
-/* --------------------------------------------------- PAGE CONTENT ----------------------------------------------------- */
-.container {
-    float: right;
-    width: 66.67%;
-}
-
-/* additional styles */
-.container h1 {
-    text-align: center; /* Center the headers */
-    margin-bottom: 10px; /* Add some space between the headers and the buttons */
-}
-.container div {
-    display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    flex-wrap: wrap; /* Allow the buttons to wrap to the next line if necessary */
-    gap: 10px; /* Add some space between the buttons */
-}
-body {
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-#otsikko {
-    font-size: 40px;
-    text-align: center;
+  .strip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    z-index: 1;
   }
-/* Remove the flexbox styles from the button containers */
-.pohja-btn,
-.kastike-btn,
-.tayte-btn,
-.juusto-btn {
-    display: block;
-    flex-direction: row;
-    justify-content: center; /* Optional: Center the buttons horizontally */
-}
-select {
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    background-color: #f2f2f2;
-    color: #333;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-select:focus {
-    outline: none;
-}
-
-select option:disabled {
-    color: #999;
-}
-
-select option {
-    background-color: #f2f2f2;
-    color: #333;
-}
-
-.head1 {
+  
+  .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .container {
     position: relative;
-    padding-top: 100px;
+    z-index: 2;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .header {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 100%; /* adjust the height as desired */
+    z-index: 1; /* set a higher z-index than the background image */
+    background-color: white;
+    opacity: 1; /* adjust the opacity as desired */
+    box-sizing: border-box;
+    padding: 0 20px; /* add some padding on the sides */
+  }
+/* --------------------------------------------------- PAGE CONTENT ----------------------------------------------------- */
+.header-ot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 5;
   }
   
-  .head1 h1 {
-    font-size: 40px;
+  .head1 {
+    max-width: 960px;
     text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 100px;
   }
   
