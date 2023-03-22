@@ -4,6 +4,15 @@ let kesto = 0;
 
 const hintayhtHtml = document.getElementById("hintayht")
 const tilausKesto = document.getElementById("tilausparagraph")
+const tyhjennaOstoskoriNappi = document.getElementById("tyhjennäOstoskori")
+
+const TyhjennaOstoskori = () => {
+  localStorage.setItem("pizzaArray", JSON.stringify([]));
+  location.reload();
+}
+
+
+tyhjennaOstoskoriNappi.addEventListener('click', TyhjennaOstoskori);
 
 document.addEventListener("DOMContentLoaded", function () {
 
