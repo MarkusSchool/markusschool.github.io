@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     pizzaArray.forEach((dict) => { // päästään dictionaryihin käsiksi, jotka ovat pizza arrayn sisällä
       console.log(dict);
-      hintayht += Number(dict.hinta); //Lisätään yhteiseen hintaan dictionaryssa oleva hinta 
-      kesto += dict.paistumisaika
+      hintayht += Number(dict.hinta) + dict['täytteet'].length; //Lisätään yhteiseen hintaan dictionaryssa oleva hinta 
+      kesto += dict.paistumisaika * dict['määrä']
     });
 
     console.log(hintayht) //Printataan yhteishinta
