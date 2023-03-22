@@ -5,26 +5,41 @@ let kesto = 0;
 const hintayhtHtml = document.getElementById("hintayht")
 const tilausKesto = document.getElementById("tilausparagraph")
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
-    const pizzaArray = JSON.parse(localStorage.getItem("pizzaArray"));
-    
-    if (pizzaArray && pizzaArray.length > 0) {
-      console.log("arrayssa on jotain")
+  const pizzaArray = JSON.parse(localStorage.getItem("pizzaArray"));
 
-      pizzaArray.forEach((dict) => { // päästään dictionaryihin käsiksi, jotka ovat pizza arrayn sisällä
-        console.log(dict); 
-        hintayht += Number(dict.hinta); //Lisätään yhteiseen hintaan dictionaryssa oleva hinta 
-        kesto += dict.paistumisaika
-      });
+  if (pizzaArray && pizzaArray.length > 0) {
+    console.log("arrayssa on jotain")
 
-      console.log(hintayht) //Printataan yhteishinta 
+    pizzaArray.forEach((dict) => { // päästään dictionaryihin käsiksi, jotka ovat pizza arrayn sisällä
+      console.log(dict);
+      hintayht += Number(dict.hinta); //Lisätään yhteiseen hintaan dictionaryssa oleva hinta 
+      kesto += dict.paistumisaika
+    });
 
-      hintayht = Number(hintayht).toFixed(2)
+    console.log(hintayht) //Printataan yhteishinta
+    // Muutetaan kesto tunneiksi ja minuuteiksi, jos kesto ylittää 60 minuuttia
+    let kestoTunneiksi = Math.floor(kesto / 60);
+    let kestoMinuuteiksi = kesto % 60;
 
-      hintayhtHtml.textContent = `Yhteishinta: ${hintayht}€`
-      tilausKesto.textContent = `Tilauksessa kestää noin: ${kesto} min.`
-
+    // Luodaan keston esitys tunteina ja minuutteina
+    let kestoEsitys = "";
+    if (kestoTunneiksi > 0) {
+      kestoEsitys += `${kestoTunneiksi}h `;
     }
-    
+    kestoEsitys += `${kestoMinuuteiksi}min`;
+
+    // Päivitetään HTML-elementti tilausKesto
+    tilausKesto.textContent = `Tilauksessa kestää noin: ${kestoEsitys}`;
+
+
+    hintayht = Number(hintayht).toFixed(2)
+
+    hintayhtHtml.textContent = `Yhteishinta: ${hintayht}€`
+    tilausKesto.textContent = `Tilauksessa kestää noin: ${kestoEsitys}`;
+
+  }
+
 });
+
