@@ -71,73 +71,92 @@
         <div class="strip"></div>
         <img class="bg-img" src="images/fantasia-tausta.webp"/>
         <div class="header"></div>
-            <div class="container">
-                <!--OTSIKON ALKU-->
-                <div class="head1">
-                    <div>
-                    <h1>Fantasia Pizza</h1>
-                    </div>
-                </div>
-                <!--OTSIKON LOPPU & POHJA ALKU-->
-                <div class="pohja">
-                    <div class="pohja-ot">
-                        <h1 id="otsikko">Pohja</h1>
-                    </div>
-                    <div class="pohja-btn">
-                        <select>
-                            <option value="" selected disabled>-- valitse --</option>
-                            <option value="norm">Normaali</option>
-                            <option value="gluteeniton">Gluteeniton</option>
-                        </select>
-                    </div>
-                </div>
-                <!--POHJA LOPPU & KASTIKE ALKU-->
-                <div class="kastike">
-                    <div class="kastike-ot">
-                        <h1 id="otsikko">Kastike</h1>
-                    </div>
-                    <div class="kastike-btn">
-                        <select>
-                            <option value="" selected disabled>-- valitse --</option>
-                            <option valaue="valkosipuli">Valkosipuli</option>
-                            <option value="ilman">Ei Kastiketta</option>
-                        </select>
-                    </div>
-                </div>
-                <!--KASTIKE LOPPU & TÄYTE ALKU-->
-                <div class="tayte">
-                    <div class="tayte-ot">
-                        <h1 id="otsikko">Täyte</h1>
-                    </div>
-                    <div class="tayte-btn">
-                        <select>
-                            <option value="" selected disabled>-- valitse --</option>
-                            <option valaue="tayte1">Täyte 1</option>
-                            <option value="tayte2">Täyte 2</option>
-                            <option valaue="tayte3">Täyte 3</option>
-                            <option value="tayte4">Täyte 4</option>
-                            <option value="tayte5">Täyte 5</option>
-                        </select>
-                    </div>
-                </div>
-                <!--TÄYTE LOPPU & JUUSTO ALKU-->
-                <div class="juusto">
-                    <div>
-                        <h1 id="otsikko">Juusto Täyte</h1>
-                    </div>
-                    <div class="juusto-btn">
-                        <select>
-                            <option value="" selected disabled>-- valitse --</option>
-                            <option value="pal-juusto">Makuparatiisin Juusto</option>
-                            <option value="vah-juusto">Cheddar Juusto</option>
-                            <option value="ei-juusto">Ei Juustoa</option>
-                        </select>
-                    </div>
-                </div>
-                <!--JUUSTO LOPPU-->
+    </div>
+    <div class="container">
+        <!--OTSIKON ALKU-->
+        <div class="head1">
+            <div>
+            <h1>Fantasia Pizza</h1>
             </div>
         </div>
-    <!--SIVUN SISÄLTÖ LOPPU-->
+        <!--OTSIKON LOPPU & POHJA ALKU-->
+        <div class="pohja">
+            <div class="pohja-ot">
+                <h1 id="otsikko">Pohja</h1>
+            </div>
+            <div class="pohja-btn">
+                <select>
+                    <option value="" selected disabled>-- valitse --</option>
+                    <option value="norm">Normaali</option>
+                    <option value="gluteeniton">Gluteeniton</option>
+                </select>
+            </div>
+        </div>
+        <!--POHJA LOPPU & KASTIKE ALKU-->
+        <div class="kastike">
+            <div class="kastike-ot">
+                <h1 id="otsikko">Kastike</h1>
+            </div>
+            <div class="kastike-btn">
+                <select>
+                    <option value="" selected disabled>-- valitse --</option>
+                    <option value="valkosipuli">Valkosipuli</option>
+                    <option value="ilman">Ei Kastiketta</option>
+                </select>
+            </div>
+        </div>
+        <!--KASTIKE LOPPU & TÄYTE ALKU-->
+        <div class="tayte">
+            <div class="tayte-ot">
+                <h1 id="otsikko">Täyte</h1>
+            </div>
+            <div class="select-box">
+                <div class="options-container">
+                  <div class="option">
+                    <input type="checkbox" class="checkbox" id="tayte1" />
+                    <label for="tayte1">Täyte 1</label>
+                  </div>
+                  <div class="option">
+                    <input type="checkbox" class="checkbox" id="tayte2" />
+                    <label for="tayte2">Täyte 2</label>
+                  </div>
+                  <div class="option">
+                    <input type="checkbox" class="checkbox" id="tayte3" />
+                    <label for="tayte3">Täyte 3</label>
+                  </div>
+                  <div class="option">
+                    <input type="checkbox" class="checkbox" id="tayte4" />
+                    <label for="tayte4">Täyte 4</label>
+                  </div>
+                  <div class="option">
+                    <input type="checkbox" class="checkbox" id="tayte5" />
+                    <label for="tayte5">Täyte 5</label>
+                  </div>
+                  <div class="option">
+                    <input type="checkbox" class="checkbox" id="tayte6" />
+                    <label for="tayte6">Täyte 6</label>
+                  </div>
+                </div>
+                <div class="selected">Valitse täytteet</div>
+              </div>
+        </div>
+        <!--TÄYTE LOPPU & JUUSTO ALKU-->
+        <div class="juusto">
+            <div>
+                <h1 id="otsikko">Juusto Täyte</h1>
+            </div>
+            <div class="juusto-btn">
+                <select>
+                    <option value="" selected disabled>-- valitse --</option>
+                    <option value="pal-juusto">Makuparatiisin Juusto</option>
+                    <option value="vah-juusto">Cheddar Juusto</option>
+                    <option value="ei-juusto">Ei Juustoa</option>
+                </select>
+            </div>
+        </div>
+        <!--JUUSTO LOPPU-->
+    </div>
+<!--SIVUN SISÄLTÖ LOPPU-->
 <!--YLÄ JA ALA OSAN JUTTUJA-->
     <div id="content">
     <!-- header -->
