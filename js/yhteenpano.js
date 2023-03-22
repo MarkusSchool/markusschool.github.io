@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
       pizzaArray.forEach((dict) => { // päästään dictionaryihin käsiksi, jotka ovat pizza arrayn sisällä
         console.log(dict); 
-        hintayht += Number(dict.hinta).toFixed(2); //Lisätään yhteiseen hintaan dictionaryssa oleva hinta 
+        hintayht += dict.hinta //Lisätään yhteiseen hintaan dictionaryssa oleva hinta 
         kesto += dict.paistumisaika
       });
 
-      console.log(hintayht) //Printataan yhteishinta 
+      console.log(hintayht) //Printataan yhteishinta
 
-      hintayhtHtml.textContent = `Yhteishinta: ${hintayht.toFixed(2)  }€`
+      hintayhtHtml.textContent = `Yhteishinta: ${hintayht}€`
       tilausKesto.textContent = `Tilauksessa kestää noin: ${kesto} min.`
 
     }
