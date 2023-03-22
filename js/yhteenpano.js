@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       console.log(hintayht) //Printataan yhteishinta
 
-      hintayhtHtml.textContent = `Yhteishinta: ${hintayht}€`
+      hintayhtHtml.textContent = `Yhteishinta: ${Number(hintayht)}€`
       tilausKesto.textContent = `Tilauksessa kestää noin: ${kesto} min.`
 
     }
