@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hintayht += Number(dict.hinta); //Lisätään yhteiseen hintaan dictionaryssa oleva hinta 
       kesto += dict.paistumisaika
     });
-
+ 
     console.log(hintayht) //Printataan yhteishinta
     // Muutetaan kesto tunneiksi ja minuuteiksi, jos kesto ylittää 60 minuuttia
     let kestoTunneiksi = Math.floor(kesto / 60);
