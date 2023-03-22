@@ -71,40 +71,36 @@
         <h1>Ostoskori</h1>
         <!--Otsikko loppu-->
     </div>
+    <div class="takaisin">
+      <a href="pizzanTilausSivu.html">
+        <button type="button" class="takaisin-btn">Takaisin</button>
+      </a>
+    </div>
 
     <div class="container">
-        <div class="teidot">
-          <!-- TIEDOT -->
-          <div class="tilaukset">
+
+        <div class="hinta">
+            <h2 id="hintayht">Hinta: </h2>
+        </div>
+        <div class="tilaukset">
             <div class="tilaus-kuvat">
               <p>(kuvat menevät tähän)</p>
+            </div>
+            <div>
+              <p id="tilausLista"></p>
             </div>
             <div class="kesto">
               <!-- kuinka kauan tilauksessa kestää-->
               <div class="kesto-otsikko">
-                <h2>Kesto:</h2>
+                <h2 id="tilausparagraph">Tilauksessa kestää noin:</h2>
                 <div class="kesto-aika">
                   <h1 id="toimitus-aika"></h1>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- TIEDOT LOPPU -->
-          <div class="tilaa-btn">
-            <div class="tilaa">
-              <button type="button" class="tilaa-button">Tilaa</button>
-            </div>
-          </div>
-        </div>
-        <div class="hinta">
-          <h2>Yhteissumma:</h2>
-          <div class="hinta-sum">
-            <h1 id="total-price"></h1>
-            <p class="price-text"></p>
-          </div>
         </div>
         <div class="tyhjenna">
-          <button type="button" onclick="clearShoppingCart()">Tyhjennä ostoskori</button>
+          <button id="tyhjennäOstoskori" type="button" onclick="clearShoppingCart()">Tyhjennä ostoskori</button>
         </div>
       </div>
       
@@ -232,6 +228,7 @@
            })
          })
       </script>
+      <script src="js/yhteenpano.js"></script>
 
 </body>
 
