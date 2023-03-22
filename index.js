@@ -142,15 +142,18 @@ function pizzaJuttu(pizzaNimi) {
     const koko = 'normaali' // väliaikane kunnes saadaan jotkut checkboxit koolle perkele 
     const gluteeniton = false; // true = gluteeniton, false = gluteenia
     let pizzanPaistumisaika = 0;
+    let taytteet = []
 
     if(koko == 'normaali') {
       pizzanPaistumisaika += 10
     } else {
       pizzanPaistumisaika += 15
+      pizzaHinta += 1
     }
 
     if(gluteeniton) {
       pizzanPaistumisaika += 3
+      pizzaHinta += 2
     }
 
 
@@ -161,6 +164,7 @@ function pizzaJuttu(pizzaNimi) {
       'paistumisaika' : pizzanPaistumisaika,
       'gluteeniton' : gluteeniton,
       'hinta': pizzaHinta,
+      'täytteet' : taytteet
     };
 
     console.log(kokoPizza);
