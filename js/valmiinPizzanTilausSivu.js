@@ -19,9 +19,11 @@ function Maara(pizzaNro){
             document.getElementById(pizzaNro).innerHTML = '0';
         }
 }
+
 //lisätään valitun pizzan lukumäärää
 function LisaaPizza(pizzaNro){
     localStorage.setItem(pizzaNro, Number(localStorage.getItem(pizzaNro)) + 1);
+    console.log(localStorage.getItem(pizzaNro));
     Maara(pizzaNro);
 }
 //vähennetään valitun pizzan lukumäärää

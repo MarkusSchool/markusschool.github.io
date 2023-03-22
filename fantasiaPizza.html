@@ -48,14 +48,17 @@
                 <li class="active">
                     <a href="index.html">Koti</a>
                 </li>
-                <li>
+                <li> 
                     <a href="pizzanTilausSivu.html">Pizzan tilaus</a>
                 </li>
                 <li>
-                  <a href="palaute.html">Anna palautetta</a>
+                    <a href="fantasiaPizza.html">Fantasia pizza</a>
                 </li>
                 <li>
-                    <a href="fantasiaPizza.html">Fantasia pizza</a>
+                    <a href="ostoskori.html">Ostoskori</a>
+                </li>
+                <li>
+                    <a href="palaute.html">Anna palautetta</a>
                 </li>
             </ul>
         </nav>
@@ -73,7 +76,66 @@
     </div>
 
     <div class="container">
-        <p>moi</p>
+        <div class="pohja">
+            <div class="pohja-ot">
+                <h1 id="otsikko">Pohja</h1>
+            </div>
+            <div class="norm">
+                <button type="button" id="valinta">Normaali</button>
+            </div>
+            <div class="gluteeniton">
+                <button type="button" id="valinta">Gluteeniton</button>
+            </div>
+        </div>
+
+        <div class="kastike">
+            <div class="kastike-ot">
+                <h1 id="otsikko">Kastike</h1>
+            </div>
+            <div class="valkosipuli">
+                <button type="button" id="valinta">Valkosipuli</button>
+            </div>
+            <div class="ilman">
+                <button type="button" id="valinta">Ei Kastiketta</button>
+            </div>
+        </div>
+
+        <div class="tayte">
+            <div class="tayte-ot">
+                <h1 id="otsikko">Täyte</h1>
+            </div>
+            <div class="tayte1">
+                <button type="button" id="valinta">Täyte 1</button>
+            </div>
+            <div class="tayte2">
+                <button type="button" id="valinta">Täyte 2</button>
+            </div>
+            <div class="tayte3">
+                <button type="button" id="valinta">Täyte 3</button>
+            </div>
+            <div class="tayte4">
+                <button type="button" id="valinta">Täyte 4</button>
+            </div>
+            <div class="tayte5">
+                <button type="button" id="valinta">Täyte 5</button>
+            </div>
+        </div>
+
+        <div class="juusto">
+            <div>
+                <h1 id="otsikko">Juusto Täyte</h1>
+            </div>
+            <div class="juusto+">
+                <button type="button" id="valinta">Paljon Juustoa</button>
+            </div>
+            <div class="juusto-">
+                <button type="button" id="valinta">Vähän Juustoa</button>
+            </div>
+            <div class="ei-juusto">
+                <button type="button" id="valinta">Ei Juustoa</button>
+            </div>
+        </div>
+
     </div>
     <div id="content">
     <!-- header -->
@@ -90,7 +152,7 @@
                         <div class="right_header_info">
                             <ul>
                                 <li class="button_user"><a class="button active" id="kirjauduNappi" href="kirjautuminen.html">Kirjaudu</a><a class="button" id="rekisteroiNappi" href="rekisterointi.html">Rekisteröidy</a><a class="button" id="kirjauduUlosNappi" onclick="ulos()" href="#">Kirjaudu ulos</a></li>
-                                <li id="ostoskori"><button type="button"><img style="margin-right: 5px; margin-left: 5px;" src="images/shopping-cart.jpg" alt="#" width="30" height="30"></button></li>
+                                <li id="ostoskori"><button type="button" onclick="window.location.href='ostoskori.html'"><img style="margin-right: 5px; margin-left: 5px;" src="images/shopping-cart.jpg" alt="#" width="30" height="30"></button></li>
                                 <li>
                                     <button type="button" id="sidebarCollapse">
                                         <img src="images/menu_icon.png" alt="#">
