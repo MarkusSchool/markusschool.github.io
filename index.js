@@ -6,7 +6,6 @@ if (!pizzaArray) {
   pizzaArray = [];
 }
 
-
 const pizzahinnat = {
   liha: 12.50,
   hawaii: 11.00,
@@ -16,8 +15,6 @@ const pizzahinnat = {
   tulinen: 12.75,
   pepperoni: 10.50
 }
-
-let yhteishinta = 0
 
 // Funktio, joka tarkistaa, onko käyttäjä kirjautunut ja piilottaa / näyttää sivuston osia sen mukaan
 function onkoKirjautunut() {
