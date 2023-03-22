@@ -1,8 +1,6 @@
-// Tämä tapahtumankäsittelijä rekisteröidään ajettavaksi, kun DOM on valmis
+document.addEventListener("DOMContentLoaded", onkoKirjautunut); // Tämä tapahtumankäsittelijä rekisteröidään ajettavaksi, kun DOM on valmis
 
-document.addEventListener("DOMContentLoaded", onkoKirjautunut);
-
-let pizzaArray = JSON.parse(localStorage.getItem("pizzaArray"));
+let pizzaArray = JSON.parse(localStorage.getItem("pizzaArray")); 
 
 if (!pizzaArray) {
   pizzaArray = [];
@@ -140,15 +138,28 @@ function pizzaJuttu(pizzaNimi) {
   if (maara > 0) {
     const pizzaOgHinta = pizzahinnat[pizzaNimi];
     const nimi = pizzaNimi;
-    const pizzaHinta = maara * pizzaOgHinta;
+    const pizzaHinta = (maara * pizzaOgHinta).toFixed(2);
     const koko = 'normaali' // väliaikane kunnes saadaan jotkut checkboxit koolle perkele
-    const gluteeniton = true // true = gluteeniton, false = gluteenia
+    const gluteeniton = false; // true = gluteeniton, false = gluteenia
+    let pizzanPaistumisaika = 0;
+
+    if(koko == 'normaali') {
+      pizzanPaistumisaika += 10
+    } else {
+      pizzanPaistumisaika += 15
+    }
+
+    if(gluteeniton) {
+      pizzanPaistumisaika += 3
+    }
 
 
     const kokoPizza = {
       'määrä': maara,
       'nimi': nimi,
       'koko' : koko,
+      'paistumisaika' : pizzanPaistumisaika,
+      'gluteeniton' : gluteeniton,
       'hinta': pizzaHinta,
     };
 
@@ -163,7 +174,7 @@ function pizzaJuttu(pizzaNimi) {
   VALMISTUAJAN KAAVAT
 
       Pizzojen valmistumisajan kaava:
-
+S
       peruspizza: norm pohja 10 min, gluteeniton +3 min, lisätäyte + 1 min
 
       ”fantasia”-pizza: norm pohja 7 min, gluteeniton +3min, täytteet + 1 min
