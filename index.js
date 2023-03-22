@@ -139,7 +139,7 @@ function pizzaJuttu(pizzaNimi) {
     const pizzaOgHinta = pizzahinnat[pizzaNimi];
     const nimi = pizzaNimi;
     const pizzaHinta = (maara * pizzaOgHinta).toFixed(2);
-    const koko = 'normaali' // väliaikane kunnes saadaan jotkut checkboxit koolle perkele
+    const koko = 'normaali' // väliaikane kunnes saadaan jotkut checkboxit koolle perkele 
     const gluteeniton = false; // true = gluteeniton, false = gluteenia
     let pizzanPaistumisaika = 0;
 
