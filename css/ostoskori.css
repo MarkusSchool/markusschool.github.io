@@ -174,3 +174,10 @@ a.article, a.article:hover {
     text-align: right;
     transform: translate(-50% -50%)
 }
+
+button#tyhjennäOstoskori {
+    background-color: #e30505;
+    border-radius: 4px;
+    height: 40px;
+    width: 160px;
+}

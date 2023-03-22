@@ -1,24 +1,5 @@
-function Maara(pizzaNro) {
-    if (pizzaNro === null) {
-      localStorage.setItem("pizza1Kpl", 0);
-      localStorage.setItem("pizza2Kpl", 0);
-      localStorage.setItem("pizza3Kpl", 0);
-      localStorage.setItem("pizza4Kpl", 0);
-      localStorage.setItem("pizza5Kpl", 0);
-      localStorage.setItem("pizza6Kpl", 0);
-      localStorage.setItem("pizza7Kpl", 0);
-      localStorage.setItem("pizza8Kpl", 0);
-    } else if (localStorage.getItem(pizzaNro) > 0) {
-      document.getElementById(pizzaNro).innerHTML = localStorage.getItem(
-        pizzaNro
-      );
-    } else {
-      document.getElementById(pizzaNro).innerHTML = "0";
-    }
-  
     // update the total price
     updateTotalPrice();
-  }
   
   // function to update the total price element
   function updateTotalPrice() {
@@ -62,5 +43,6 @@ function Maara(pizzaNro) {
   
     // update the total price element
     document.getElementById("total-price").innerHTML = totalPrice.toFixed(2);
+    document.getElementById("tilausLista").innerHTML = localStorage.getItem("pizzaArray");
   }
   
