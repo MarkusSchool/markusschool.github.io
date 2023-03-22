@@ -135,7 +135,7 @@ function pizzaJuttu(pizzaNimi) {
   if (maara > 0) {
     const pizzaOgHinta = pizzahinnat[pizzaNimi];
     const nimi = pizzaNimi;
-    const pizzaHinta = (maara * pizzaOgHinta).toFixed(2);
+    const pizzaHinta = (maara * pizzaOgHinta);
     const koko = 'normaali' // väliaikane kunnes saadaan jotkut checkboxit koolle perkele 
     const gluteeniton = false; // true = gluteeniton, false = gluteenia
     let pizzanPaistumisaika = 0;
@@ -153,7 +153,6 @@ function pizzaJuttu(pizzaNimi) {
       pizzaHinta += 2
     }
 
-
     const kokoPizza = {
       'määrä': maara,
       'nimi': nimi,
@@ -170,6 +169,7 @@ function pizzaJuttu(pizzaNimi) {
     localStorage.setItem("pizzaArray", JSON.stringify(pizzaArray));
   }
 
+}
 
   /*
   VALMISTUAJAN KAAVAT
@@ -183,5 +183,3 @@ S
       Toimitus alle 3 km 5 min, 3-10 km 10min, 10-20km 20min, max 20 km
       
   */
-
-}
