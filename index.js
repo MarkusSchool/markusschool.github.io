@@ -135,7 +135,7 @@ function pizzaJuttu(pizzaNimi) {
   if (maara > 0) {
     const pizzaOgHinta = pizzahinnat[pizzaNimi];
     const nimi = pizzaNimi;
-    const pizzaHinta = (maara * pizzaOgHinta);
+    const pizzaHinta = maara * pizzaOgHinta;
     const koko = 'normaali' // väliaikane kunnes saadaan jotkut checkboxit koolle perkele 
     const gluteeniton = false; // true = gluteeniton, false = gluteenia
     let pizzanPaistumisaika = 0;
