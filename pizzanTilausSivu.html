@@ -112,6 +112,12 @@
         <img src="images/Pepperoni-pizza1.jpg" alt="pepperoni-pizza" height="180px" width="260.4px" />
         <h2>Pepperoni</h2>
         <p>Tämä pizza on ehdoton klassikkoherkku, joka saa veden herahtamaan kielelle pelkästä ajatuksesta!</p>
+        <label for="PohjatValikko">Valitse pohjan koko:</label>
+            <input list="pohjat" name="PohjatValikko">
+            <datalist id="pohjat">
+              <option value="Iso"></option>
+              <option  value="Pieni"></option>
+            </datalist>
         <div class="shadow">
           <div class="napit">
             <button type="button" onclick="pizzaJuttu('pepperoni')" class="btn">Lisää tuote</button>
@@ -254,7 +260,7 @@
       </div>
       <div class="pizza8">
         <img src="images/lihan-pizza.jpg" alt="lihan-pizza" height="180px" width="260.4px" />
-        <h2>Lihaisa Herkkupizza</h2>
+        <h2>Lihaisa Herkku</h2>
         <p>Lihaisa Herkkupizza on lihansyöjän unelma, jossa suussa sulava juusto yhdistyy mehevään jauhelihaan, savuisaan pepperoniin ja suolaiseen kinkkuun!</p>
         <div class="shadow">
           <div class="napit">
