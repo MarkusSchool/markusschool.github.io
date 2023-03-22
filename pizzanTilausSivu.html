@@ -114,16 +114,16 @@
         <p>Tämä pizza on ehdoton klassikkoherkku, joka saa veden herahtamaan kielelle pelkästä ajatuksesta!</p>
         <div class="shadow">
           <div class="napit">
-            <button type="button" class="btn">Lisää tuote</button>
+            <button type="button" onclick="pizzaJuttu('pepperoni')" class="btn">Lisää tuote</button>
             <div class="btn1">
               <div class="plusbtn">
-                <button type="button" class="ympyra" onclick="LisaaPizza('pizza2Kpl')">+</button>
+                <button type="button" class="ympyra" onclick="LisaaPizza('pepperoni-maara')">+</button>
               </div>
               <div class="maara">
-                <p class="montako" id="pizza2Kpl">0</p>
+                <p class="montako" id="pepperoni-maara">0</p>
               </div>
               <div class="miinusbtn">
-                <button type="button" class="miinusympyra" onclick="VahennaPizza('pizza2Kpl')">-</button>
+                <button type="button" class="miinusympyra" onclick="VahennaPizza('pepperoni-maara')">-</button>
               </div>
               <div class="hinta">
               <p class="hintanum" id="hinta1">9.20</p>
@@ -138,19 +138,19 @@
         <p>Tämä pizza on kuin räjähtävä makuhermojen ilotulitus, joka saa suun sekä sydämen sykkimään jokaisen herkullisen suupalan kohdalla.</p>
         <div class="shadow">
           <div class="napit">
-            <button type="button" class="btn">Lisää tuote</button>
+            <button type="button" onclick="pizzaJuttu('tulinen')" class="btn">Lisää tuote</button>
             <div class="btn1">
               <div class="plusbtn">
-                <button type="button" class="ympyra" onclick="LisaaPizza('pizza3Kpl')">+</button>
+                <button type="button" class="ympyra" onclick="LisaaPizza('tulinen-maara')">+</button>
               </div>
               <div class="maara">
-                <p class="montako" id="pizza3Kpl">0</p>
+                <p class="montako" id="tulinen-maara">0</p>
               </div>
               <div class="miinusbtn">
-                <button type="button" class="miinusympyra" onclick="VahennaPizza('pizza3Kpl')">-</button>
+                <button type="button" class="miinusympyra" onclick="VahennaPizza('tulinen-maara')">-</button>
               </div>
               <div class="hinta">
-                <p class="hintanum">{0.00}€</p>
+                <p class="tulinen-hintanum">12.75€</p>
               </div>
             </div>
           </div>
@@ -162,19 +162,19 @@
         <p>Tämä herkullinen BBQ-kana pizza tarjoaa täydellisen makuelämyksen, joka saa makunystyräsi tanssimaan riemusta!</p>
         <div class="shadow">
           <div class="napit">
-            <button type="button" class="btn">Lisää tuote</button>
+            <button type="button" onclick="pizzaJuttu('bbq')" class="btn">Lisää tuote</button>
             <div class="btn1">
               <div class="plusbtn">
-                <button type="button" class="ympyra" onclick="LisaaPizza('pizza4Kpl')">+</button>
+                <button type="button" class="ympyra" onclick="LisaaPizza('bbq-maara')">+</button>
               </div>
               <div class="maara">
-                <p class="montako" id="pizza4Kpl">0</p>
+                <p class="montako" id="bbq-maara">0</p>
               </div>
               <div class="miinusbtn">
-                <button type="button" class="miinusympyra"  onclick="VahennaPizza('pizza4Kpl')">-</button>
+                <button type="button" class="miinusympyra"  onclick="VahennaPizza('bbq-maara')">-</button>
               </div>
               <div class="hinta">
-                <p class="hintanum">{0.00}€</p>
+                <p class="bbq-hintanum">11.20€</p>
               </div>
             </div>
           </div>
@@ -186,19 +186,19 @@
         <p>Tämä Vihreä Keidas pizza on täynnä raikasta makua ja terveellisiä vihanneksia, jotka tekevät siitä täydellisen valinnan herkutteluhetkiin!</p>
         <div class="shadow">
           <div class="napit">
-            <button type="button" class="btn">Lisää tuote</button>
+            <button type="button" onclick="pizzaJuttu('kasvis')" class="btn">Lisää tuote</button>
             <div class="btn1">
               <div class="plusbtn">
-                <button type="button" class="ympyra" onclick="LisaaPizza('pizza5Kpl')">+</button>
+                <button type="button" class="ympyra" onclick="LisaaPizza('kasvis-maara')">+</button>
               </div>
               <div class="maara">
-                <p class="montako" id="pizza5Kpl">0</p>
+                <p class="montako" id="kasvis-maara">0</p>
               </div>
               <div class="miinusbtn">
-                <button type="button" class="miinusympyra" onclick="VahennaPizza('pizza5Kpl')">-</button>
+                <button type="button" class="miinusympyra" onclick="VahennaPizza('kasvis-maara')">-</button>
               </div>
               <div class="hinta">
-                <p class="hintanum">{0.00}€</p>
+                <p class="kasvis-hintanum">16.80€</p>
               </div>
             </div>
           </div>
@@ -210,19 +210,19 @@
         <p>Juustolampi pizza tarjoaa täyteläisen makuelämyksen, jossa herkullinen juusto yhdistyy raikkaaseen vihreään pestoon.</p>
         <div class="shadow">
           <div class="napit">
-            <button type="button" class="btn">Lisää tuote</button>
+            <button type="button" onclick="pizzaJuttu('juusto')" class="btn">Lisää tuote</button>
             <div class="btn1">
               <div class="plusbtn">
-                <button type="button" class="ympyra" onclick="LisaaPizza('pizza6Kpl')">+</button>
+                <button type="button" class="ympyra" onclick="LisaaPizza('juusto-maara')">+</button>
               </div>
               <div class="maara">
-                <p class="montako" id="pizza6Kpl">0</p>
+                <p class="montako" id="juusto-maara">0</p>
               </div>
               <div class="miinusbtn">
-                <button type="button" class="miinusympyra" onclick="VahennaPizza('pizza6Kpl')">-</button>
+                <button type="button" class="miinusympyra" onclick="VahennaPizza('juusto-maara')">-</button>
               </div>
               <div class="hinta">
-                <p class="hintanum">{0.00}€</p>
+                <p class="juusto-hintanum">11.30€</p>
               </div>
             </div>
           </div>
@@ -234,19 +234,19 @@
         <p>Hawaii pizza on täydellinen yhdistelmä makeaa ananasta, suolaista kinkkua ja sulavaa juustoa, joka saa makunystyräsi syttymään!</p>
         <div class="shadow">
           <div class="napit">
-            <button type="button" class="btn">Lisää tuote</button>
+            <button type="button" onclick="pizzaJuttu('hawaii')" class="btn">Lisää tuote</button>
             <div class="btn1">
               <div class="plusbtn">
-                <button type="button" class="ympyra" onclick="LisaaPizza('pizza7Kpl')">+</button>
+                <button type="button" class="ympyra" onclick="LisaaPizza('hawaii-maara')">+</button>
               </div>
               <div class="maara">
-                <p class="montako" id="pizza7Kpl">0</p>
+                <p class="montako" id="hawaii-maara">0</p>
               </div>
               <div class="miinusbtn">
-                <button type="button" class="miinusympyra" onclick="VahennaPizza('pizza7Kpl')">-</button>
+                <button type="button" class="miinusympyra" onclick="VahennaPizza('hawaii-maara')">-</button>
               </div>
               <div class="hinta">
-                <p class="hintanum">{0.00}€</p>
+                <p class="hawaii-hintanum">11.00€</p>
               </div>
             </div>
           </div>
@@ -258,19 +258,19 @@
         <p>Lihaisa Herkkupizza on lihansyöjän unelma, jossa suussa sulava juusto yhdistyy mehevään jauhelihaan, savuisaan pepperoniin ja suolaiseen kinkkuun!</p>
         <div class="shadow">
           <div class="napit">
-            <button type="button" class="btn">Lisää tuote</button>
+            <button type="button" onclick="pizzaJuttu('liha')" class="btn">Lisää tuote</button>
             <div class="btn1">
               <div class="plusbtn">
-                <button type="button" class="ympyra" onclick="LisaaPizza('pizza8Kpl')">+</button>
+                <button type="button" class="ympyra" onclick="LisaaPizza('liha-maara')">+</button>
               </div>
               <div class="maara">
-                <p class="montako" id="pizza8Kpl">0</p>
+                <p class="montako" id="liha-maara">0</p>
               </div>
               <div class="miinusbtn">
-                <button type="button" class="miinusympyra" onclick="VahennaPizza('pizza8Kpl')">-</button>
+                <button type="button" class="miinusympyra" onclick="VahennaPizza('liha-maara')">-</button>
               </div>
               <div class="hinta">
-                <p class="hintanum">{0.00}€</p>
+                <p class="liha-hintanum">12.50€</p>
               </div>
             </div>
           </div>
@@ -343,6 +343,7 @@
      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     
      <script src="js/jquery-3.0.0.min.js"></script>
+     <script src="index.js"></script>
    <script type="text/javascript">
         $(document).ready(function() {
             $("#sidebar").mCustomScrollbar({

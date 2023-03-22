@@ -5,14 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
 //päivitetään lukumäärä
 function Maara(pizzaNro){
         if(pizzaNro === null){
-            localStorage.setItem('pizza1Kpl', 0);
-            localStorage.setItem('pizza2Kpl', 0);
-            localStorage.setItem('pizza3Kpl', 0);
-            localStorage.setItem('pizza4Kpl', 0);
-            localStorage.setItem('pizza5Kpl', 0);
-            localStorage.setItem('pizza6Kpl', 0);
-            localStorage.setItem('pizza7Kpl', 0);
-            localStorage.setItem('pizza8Kpl', 0);
+            localStorage.setItem('pepperoni-maara', 0);
+            localStorage.setItem('tulinen-maara', 0);
+            localStorage.setItem('bbq-maara', 0);
+            localStorage.setItem('kasvis-maara', 0);
+            localStorage.setItem('juusto-maara', 0);
+            localStorage.setItem('hawaii-maara', 0);
+            localStorage.setItem('liha-maara', 0);
         }else
         if(localStorage.getItem(pizzaNro) > 0){
             document.getElementById(pizzaNro).innerHTML = localStorage.getItem(pizzaNro);
