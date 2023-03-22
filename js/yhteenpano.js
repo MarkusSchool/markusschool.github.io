@@ -7,8 +7,10 @@ const tilausKesto = document.getElementById("tilausparagraph")
 const tyhjennaOstoskoriNappi = document.getElementById("tyhjennäOstoskori")
 
 const TyhjennaOstoskori = () => {
-  localStorage.setItem("pizzaArray", JSON.stringify([]));
-  location.reload();
+  if (JSON.parse(localStorage.getItem("pizzaArray")).length > 0) { //estää turhan ostoskori tyhjennysnapin spammin
+    localStorage.setItem("pizzaArray", JSON.stringify([]));
+    location.reload();
+  }
 }
 
 
@@ -26,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hintayht += Number(dict.hinta); //Lisätään yhteiseen hintaan dictionaryssa oleva hinta 
       kesto += dict.paistumisaika
     });
- 
+
     console.log(hintayht) //Printataan yhteishinta
     // Muutetaan kesto tunneiksi ja minuuteiksi, jos kesto ylittää 60 minuuttia
     let kestoTunneiksi = Math.floor(kesto / 60);
@@ -42,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Päivitetään HTML-elementti tilausKesto
     tilausKesto.textContent = `Tilauksessa kestää noin: ${kestoEsitys}`;
 
-      console.log(hintayht) //Printataan yhteishinta
+    console.log(hintayht) //Printataan yhteishinta
 
     hintayht = Number(hintayht).toFixed(2)
 
