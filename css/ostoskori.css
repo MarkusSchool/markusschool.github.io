@@ -44,6 +44,18 @@ td {
     font-size: 35px;
 }
 
+#toimitusosoite {
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    height: 20%;
+    border-radius: 20vh;
+}
+
+
 /* --------------------------------------------------- SIDEBAR STYLE ----------------------------------------------------- */
 #sidebar {
     width: 280px;

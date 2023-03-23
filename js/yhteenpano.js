@@ -7,7 +7,18 @@ const otsikko = document.getElementById("otsikko")
 const parentElement = document.querySelector('.tyhjenna');
 const tyhjennaOstoskoriNappi = document.getElementById("tyhjennäOstoskori")
 const kuljetusTavat = document.querySelector(".kuljetustavat")
+const toimitusosoiteBox = document.getElementById("toimitusosoite")
 
+toimitusosoiteBox.style.display = "none"
+
+kuljetusTavat.onchange = (event) => {
+  let selected = kuljetusTavat.options[kuljetusTavat.selectedIndex].value;
+  if(selected=="Kuljetus") {
+    toimitusosoiteBox.style.display = ""
+  } else {
+    toimitusosoiteBox.style.display = "none";
+  }
+}
 
 const TyhjennaOstoskori = () => {
   if (JSON.parse(localStorage.getItem("pizzaArray")).length > 0) { //estää turhan ostoskori tyhjennysnapin spammin
