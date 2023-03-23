@@ -1,13 +1,32 @@
 // retrieve the value from localStorage
-var numOfPizzas = Number(localStorage.getItem("fantasia-maara"));
+let numOfPizzas = Number(localStorage.getItem("Fantasia-maara"));
+
+const lisaaOstoskoriinNappi = document.getElementById("fantasiaOstoskoriin")
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 // select the HTML element and set its innerHTML to the value of numOfPizzas
 document.getElementById("numOfPizzas").innerHTML = numOfPizzas;
 
 // select the container element
-var container = document.getElementById("numOfPizzasContainer");
+let container = document.getElementById("numOfPizzasContainer");
 
 // hide the container element if numOfPizzas is less than or equal to 1
 if (numOfPizzas == 0) {
   numOfPizzas = 1;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  lisaaOstoskoriinNappi.addEventListener('click', function () {
+
+    checkboxes.forEach((checkbox) => {
+      // Tarkista, onko checkbox valittu
+      if (checkbox.checked) {
+        console.log(`${checkbox.id} on valittu.`);
+      } else {
+        console.log(`${checkbox.id} ei ole valittu.`);
+      }
+    });
+
+  });
+
+});

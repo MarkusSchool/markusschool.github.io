@@ -6,6 +6,7 @@ const tilausKesto = document.getElementById("tilausparagraph")
 const otsikko = document.getElementById("otsikko")
 const parentElement = document.querySelector('.tyhjenna');
 const tyhjennaOstoskoriNappi = document.getElementById("tyhjennäOstoskori")
+const kuljetusTavat = document.querySelector(".kuljetustavat")
 
 
 const TyhjennaOstoskori = () => {
@@ -84,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hintaKohta.textContent = `${dict.hinta}€`;
       kokoKohta.textContent = `${dict.koko}`;
       gluteenitonKohta.textContent = `${dict.gluteeniton}`
-      aikaKohta.textContent = `${dict.paistumisaika} min`;
+      aikaKohta.textContent = `${dict.paistumisaika * dict['määrä']} min`;
       maaraKohta.textContent = `${dict['määrä']}x`;
 
       const poistaKohta = document.createElement("td");
@@ -105,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
           tilausKesto.style.display = "none";
           tyhjennaOstoskoriNappi.style.display = "none";
           otsikko.textContent = "Sinulla ei ole mitään ostoskorissa";
+          kuljetusTavat.style.display = "none";
           hintayhtHtml.style.display = "none";
         }
       });
@@ -148,6 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
     tyhjennaOstoskoriNappi.style.display = "none";
     otsikko.textContent = "Sinulla ei ole mitään ostoskorissa";
     hintayhtHtml.style.display = "none";
+    kuljetusTavat.style.display = "none";
     table.remove()
   }
 
