@@ -138,11 +138,22 @@ function pizzaJuttu(pizzaNimi) {
   if (maara > 0) {
     const pizzaOgHinta = pizzahinnat[pizzaNimi];
     const nimi = pizzaNimi;
-    const pizzaHinta = maara * pizzaOgHinta;
-    const koko = 'Normaali' // väliaikane kunnes saadaan jotkut checkboxit koolle perkele 
-    const gluteeniton = false; // true = gluteeniton, false = gluteenia
+    let pizzaHinta = maara * pizzaOgHinta; 
+    
     let pizzanPaistumisaika = 0;
     let taytteet = []
+    let koko;
+
+    //console.log(document.getElementById('suuripohja').checkboxObject.value)
+
+    const pohjavalittu = document.getElementById('suuripohja' + pizzaNimi).checked;
+    const gluteeniton = document.getElementById('gluteenitonValittu' + pizzaNimi).checked; // true = gluteeniton, false = gluteenia
+    
+    if(pohjavalittu === true){
+      koko = 'Suuri';
+    } else {
+      koko = 'Normaali';
+    }
 
     if(koko == 'Normaali') {
       pizzanPaistumisaika += 10

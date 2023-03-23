@@ -159,27 +159,34 @@ h1 {
     position: relative;
 }
 .pizza1 {
-    top: 75px;
+    top: 40px;
 }
 
 .pizza2 {
     top: 54px;
 }
+.pizza5 {
+    top: 15px;
+}
+.pizza6 {
+    top: 15px;
+}
+.pizza7 {
+    top: 15px;
+}
 
 .pizza3 {
-    top: 46px;
+    top: 70px;
 }
 
 .pizza4 {
-    top: 45px;
+    top: 70px;
 }
 
 .pizza8 {
     top: 17px;
 }
-.pizza5 {
-    top: 46px
-}
+
 
 
 .bg {
@@ -522,6 +529,43 @@ p {
 #suuripohja {
     height: 20px;
     width: 20px;
-    left: 5px;
+    left: 60px;
     top: 5px;
+    position: relative;
+}
+
+#suuripohjapepperoni,
+#suuripohjatulinen,
+#suuripohjabbq,
+#suuripohjakasvis,
+#suuripohjajuusto,
+#suuripohjahawaii,
+#suuripohjaliha {
+    height: 20px;
+    width: 20px;
+    left: 60px;
+    top: 5px;
+    position: relative;
+}
+
+.pizza1 input,
+.pizza2 input,
+.pizza3 input,
+.pizza4 input,
+.pizza5 input,
+.pizza6 input,
+.pizza7 input,
+.pizza8 input {
+    height: 20px;
+    width: 20px;
+    left: 155px;
+    top: 5px;
+    position: relative;
+
+}
+
+#labelGLU {
+    top: 35px;
+    right: 120px;
+    position: relative;
 }
