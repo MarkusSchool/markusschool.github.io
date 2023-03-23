@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
     hintayhtHtml.style.display = "";
 
     pizzaArray.forEach((dict) => { // päästään dictionaryihin käsiksi, jotka ovat pizza arrayn sisällä
-      console.log(dict);
 
       const rivi = document.createElement("tr");
       const nimiKohta = document.createElement("td");
@@ -120,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
       kesto += dict.paistumisaika * dict['määrä']
     });
 
-    console.log(hintayht) //Printataan yhteishinta
     // Muutetaan kesto tunneiksi ja minuuteiksi, jos kesto ylittää 60 minuuttia
     let kestoTunneiksi = Math.floor(kesto / 60);
     let kestoMinuuteiksi = kesto % 60;
@@ -132,7 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     kestoEsitys += `${kestoMinuuteiksi} minuuttia`;
 
-    console.log(hintayht) //Printataan yhteishinta
 
     hintayht = Number(hintayht).toFixed(2)
 
