@@ -13,8 +13,11 @@ const pizzahinnat = {
   kasvis: 16.80,
   bbq: 11.20,
   tulinen: 12.75,
-  pepperoni: 10.50
+  pepperoni: 10.50,
+  Fantasia : 10.00
 }
+
+const checkboxes = document.querySelectorAll('.checkbox');
 
 // Funktio, joka tarkistaa, onko käyttäjä kirjautunut ja piilottaa / näyttää sivuston osia sen mukaan
 function onkoKirjautunut() {
@@ -131,7 +134,7 @@ function tarkistaSahkoposti() {
 
 function pizzaJuttu(pizzaNimi) {
   const maara = localStorage.getItem(`${pizzaNimi}-maara`);
-
+  
   if (maara > 0) {
     const pizzaOgHinta = pizzahinnat[pizzaNimi];
     const nimi = pizzaNimi;
@@ -140,6 +143,15 @@ function pizzaJuttu(pizzaNimi) {
     const gluteeniton = false; // true = gluteeniton, false = gluteenia
     let pizzanPaistumisaika = 0;
     let taytteet = []
+
+    if(pizzaNimi === 'Fantasia') {
+      checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          const tayte = checkbox.parentElement.textContent.trim();
+          taytteet.push(tayte)
+        }
+      });      
+    }
 
     if(koko == 'Normaali') {
       pizzanPaistumisaika += 10
