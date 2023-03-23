@@ -1,5 +1,5 @@
 // retrieve the value from localStorage
-var numOfPizzas = Number(localStorage.getItem("fantasia-maara"));
+var numOfPizzas = Number(localStorage.getItem("Fantasia-maara"));
 
 // select the HTML element and set its innerHTML to the value of numOfPizzas
 document.getElementById("numOfPizzas").innerHTML = numOfPizzas;
