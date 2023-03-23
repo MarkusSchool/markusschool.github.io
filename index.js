@@ -7,14 +7,14 @@ if (!pizzaArray) {
 }
 
 const pizzahinnat = {
-  liha: 12.50,
-  hawaii: 11.00,
-  juusto: 11.30,
-  kasvis: 16.80,
-  bbq: 11.20,
-  tulinen: 12.75,
-  pepperoni: 10.50,
-  Fantasia : 10.00
+  ['liha'] : 12.50,
+  ['hawaii']: 11.00,
+  ['juusto']: 11.30,
+  ['kasvis']: 16.80,
+  ['bbq']: 11.20,
+  ['tulinen']: 12.75,
+  ['pepperoni']: 10.50,
+  ['Fantasia'] : 10.00
 }
 
 const checkboxes = document.querySelectorAll('.checkbox');
@@ -137,23 +137,37 @@ function pizzaJuttu(pizzaNimi) {
 
   if (maara > 0) {
     const pizzaOgHinta = pizzahinnat[pizzaNimi];
-    const nimi = pizzaNimi;
+    let nimi = pizzaNimi;
     let pizzaHinta = maara * pizzaOgHinta; 
     
     let pizzanPaistumisaika = 0;
     let taytteet = []
-    let koko;
+    let koko = 'Normaali'
+
+    if(pizzaNimi == 'kasvis') {
+      nimi = "Vihreä keidas"
+    } else if(pizzaNimi == "bbq") {
+      nimi = "BBQ Kana"
+    } else if (pizzaNimi == "juusto") {
+      nimi = "Juustolampi"
+    } else if (pizzaNimi == "tulinen") {
+      nimi = "Tulinen tulivuori"
+    } else if (pizzaNimi == "pepperoni") {
+      nimi = "Pepperoni"
+    } else if (pizzaNimi == "liha") {
+      nimi = "Lihaisa herkku"
+    } else if (pizzaNimi == "hawaii") {
+      nimi = "Hawaii"
+    }
 
     //console.log(document.getElementById('suuripohja').checkboxObject.value)
 
     const pohjavalittu = document.getElementById('suuripohja' + pizzaNimi).checked;
-    const gluteeniton = document.getElementById('gluteenitonValittu' + pizzaNimi).checked; // true = gluteeniton, false = gluteenia
+    let gluteeniton = document.getElementById('gluteenitonValittu' + pizzaNimi).checked; // true = gluteeniton, false = gluteenia
     
     if(pohjavalittu === true){
-      koko = 'Suuri';
-    } else {
-      koko = 'Normaali';
-    }
+      koko = 'Iso';
+    } 
 
     if(koko == 'Normaali') {
       pizzanPaistumisaika += 10
@@ -165,6 +179,9 @@ function pizzaJuttu(pizzaNimi) {
     if(gluteeniton) {
       pizzanPaistumisaika += 3
       pizzaHinta += 2
+      gluteeniton = "Kyllä"
+    } else {
+      gluteeniton = "Ei"
     }
 
     const kokoPizza = {

@@ -37,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const kokoYlike = document.createElement("th");
   kokoYlike.textContent = "Koko"
 
+  const gluteenitonYlike = document.createElement("th");
+  gluteenitonYlike.textContent = "Gluteeniton"
+
   const valmisYlike = document.createElement("th")
   valmisYlike.textContent = "Valmistumisaika"
 
@@ -49,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
   headerRow.appendChild(nimiYlike);
   headerRow.appendChild(hintaYlike);
   headerRow.appendChild(kokoYlike)
+  headerRow.appendChild(gluteenitonYlike)
   headerRow.appendChild(valmisYlike);
   headerRow.appendChild(maaraYlike)
   headerRow.appendChild(poistaYlike);
@@ -72,12 +76,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const nimiKohta = document.createElement("td");
       const hintaKohta = document.createElement("td");
       const kokoKohta = document.createElement("td");
+      const gluteenitonKohta = document.createElement("td");
       const aikaKohta = document.createElement("td");
       const maaraKohta = document.createElement("td");
 
       nimiKohta.textContent = `${dict.nimi}`;
       hintaKohta.textContent = `${dict.hinta}€`;
       kokoKohta.textContent = `${dict.koko}`;
+      gluteenitonKohta.textContent = `${dict.gluteeniton}`
       aikaKohta.textContent = `${dict.paistumisaika} min`;
       maaraKohta.textContent = `${dict['määrä']}x`;
 
@@ -108,7 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
       rivi.appendChild(nimiKohta);
       rivi.appendChild(hintaKohta);
       rivi.appendChild(kokoKohta);
-      rivi.appendChild(aikaKohta)
+      rivi.appendChild(gluteenitonKohta);
+      rivi.appendChild(aikaKohta);
       rivi.appendChild(maaraKohta);
       rivi.appendChild(poistaKohta);
       tbody.appendChild(rivi);
