@@ -18,7 +18,6 @@ const TyhjennaOstoskori = () => {
   }
 }
 
-
 tyhjennaOstoskoriNappi.addEventListener('click', TyhjennaOstoskori);
 
 document.addEventListener("DOMContentLoaded", function () {
