@@ -192,16 +192,3 @@ function pizzaJuttu(pizzaNimi) {
   }
 
 }
-
-/*
-VALMISTUAJAN KAAVAT
-
-    Pizzojen valmistumisajan kaava:
-S
-    peruspizza: norm pohja 10 min, gluteeniton +3 min, lisätäyte + 1 min
-
-    ”fantasia”-pizza: norm pohja 7 min, gluteeniton +3min, täytteet + 1 min
-
-    Toimitus alle 3 km 5 min, 3-10 km 10min, 10-20km 20min, max 20 km
-    
-*/
