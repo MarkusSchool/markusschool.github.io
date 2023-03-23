@@ -135,13 +135,27 @@ function pizzaJuttu(pizzaNimi) {
   if (maara > 0) {
     const pizzaOgHinta = pizzahinnat[pizzaNimi];
     const nimi = pizzaNimi;
+<<<<<<< Updated upstream
     const pizzaHinta = maara * pizzaOgHinta;
     const koko = 'normaali' // väliaikane kunnes saadaan jotkut checkboxit koolle perkele 
+=======
+    const pizzaHinta = (maara * pizzaOgHinta).toFixed(2); 
+>>>>>>> Stashed changes
     const gluteeniton = false; // true = gluteeniton, false = gluteenia
+    let koko = 'normaali';
     let pizzanPaistumisaika = 0;
     let taytteet = []
+    console.log(document.getElementById("suuripohja").value); //kesken
 
-    if(koko == 'normaali') {
+    if(document.getElementById("suuripohja").value === true){ //kesken
+      koko = 'iso';
+      console.log('iso pohja');
+    } else {
+      koko = 'normaali';
+      console.log('normi pohja');
+    }
+
+    if(koko === 'normaali') {
       pizzanPaistumisaika += 10
     } else {
       pizzanPaistumisaika += 15
