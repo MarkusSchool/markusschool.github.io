@@ -29,12 +29,19 @@ table {
     width: 90%;
     border-collapse: collapse;
     margin-bottom: 30px;
+    background-color: #ff2424;
+    border-radius: 10px;
 }
 
 th,
 td {
   text-align: center;
   font-size: large;
+  color: #111;
+}
+
+#otsikko {
+    font-size: 35px;
 }
 
 /* --------------------------------------------------- SIDEBAR STYLE ----------------------------------------------------- */
@@ -203,6 +210,8 @@ button#tyhjennäOstoskori {
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: relative;
+    top: 10px;
 }
 
 .kuljetustavat {
