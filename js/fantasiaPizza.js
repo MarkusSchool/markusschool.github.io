@@ -1,31 +1,54 @@
-// retrieve the value from localStorage
-let numOfPizzas = Number(localStorage.getItem("Fantasia-maara"));
-
-const lisaaOstoskoriinNappi = document.getElementById("fantasiaOstoskoriin")
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-// select the HTML element and set its innerHTML to the value of numOfPizzas
-document.getElementById("numOfPizzas").innerHTML = numOfPizzas;
-
-// select the container element
-let container = document.getElementById("numOfPizzasContainer");
-
-// hide the container element if numOfPizzas is less than or equal to 1
-if (numOfPizzas <= 1) {
-  container.style.display = "none";
-}
-
 document.addEventListener("DOMContentLoaded", function () {
-  lisaaOstoskoriinNappi.addEventListener('click', function () {
+
+  const checkboxes = document.querySelectorAll('.checkbox');
+  const pohjaSelectit = document.querySelector('#pohjaSelectit');
+  const kokoSelectit = document.querySelector('#kokoSelectit')
+  const valitutTaytteet = [];
+
+  const perusFantasiaHinta = 10.00
+
+  document.getElementById("fantasiaOstoskoriin").addEventListener('click', function () {
+    let gluteeniton = "Ei"
+    let hinta = 0;
+    let valmistumisAika = 7;
+    let koko = "Normaali";
 
     checkboxes.forEach((checkbox) => {
-      // Tarkista, onko checkbox valittu
       if (checkbox.checked) {
-        console.log(`${checkbox.id} on valittu.`);
-      } else {
-        console.log(`${checkbox.id} ei ole valittu.`);
+        valitutTaytteet.push(checkbox.id);
       }
     });
+
+    const valittuPohja = pohjaSelectit.options[pohjaSelectit.selectedIndex].value;
+    const valittuKoko = kokoSelectit.options[kokoSelectit.selectedIndex].value;
+
+    if(valittuPohja == "gluteeniton") {
+      gluteeniton = "Kyllä"
+      valmistumisAika += 3
+      hinta += perusFantasiaHinta + 2
+    }
+
+    if(valittuKoko == "iso") {
+      hinta += 3
+      valmistumisAika += 4
+      koko = "Iso";
+    }
+
+    const tayteMaara = valitutTaytteet.length;
+
+    const kokoPizza = {
+      'määrä': 3,
+      'nimi': 'Fantasia',
+      'koko': koko,
+      'paistumisaika': valmistumisAika,
+      'gluteeniton': gluteeniton,
+      'hinta': (hinta + tayteMaara).toFixed(2),
+      'täytteet': valitutTaytteet
+    };
+
+
+    console.log(kokoPizza);
+    // location.href = "./pizzanTilausSivu.html"
 
   });
 
