@@ -249,3 +249,33 @@ button#tyhjennäOstoskori:hover {
     background-color: #c90b0b;
     color: #fff;
 }
+/*JUOMAT*/
+.juomat {
+    position: absolute;
+    top: 125px;
+    right: 100px;
+}
+
+.juomat .options-container {
+    padding: 5px;
+}
+
+.juomat .option {
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.juoma-hinta {
+    position: absolute;
+    top: 20px;
+    right: -50px;
+}
+
+.option {
+    position: relative;
+}
