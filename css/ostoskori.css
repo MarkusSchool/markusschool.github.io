@@ -24,6 +24,18 @@ html {
     box-shadow: 3px 3px 4px 3px #00000069;
 }
 
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th,
+td {
+  text-align: center;
+  font-size: large;
+}
+
 /* --------------------------------------------------- SIDEBAR STYLE ----------------------------------------------------- */
 #sidebar {
     width: 280px;

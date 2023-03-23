@@ -89,7 +89,6 @@
             </div>
             <div class="pohja-btn">
                 <select>
-                    <option value="" selected disabled>-- valitse --</option>
                     <option value="norm">Normaali</option>
                     <option value="gluteeniton">Gluteeniton</option>
                 </select>
@@ -104,9 +103,8 @@
             </div>
             <div class="kastike-btn">
                 <select>
-                    <option value="" selected disabled>-- valitse --</option>
-                    <option value="valkosipuli">Valkosipuli</option>
-                    <option value="ilman">Ei Kastiketta</option>
+                    <option value="ilman">Ilman valkosipulia</option>
+                    <option value="valkosipuli">Valkosipulilla</option>
                 </select>
             </div>
         </div>
@@ -143,7 +141,7 @@
                     </label>
                   </div>
                   <div class="option">
-                    <div class="tayte-hinta"><h4>2€</h4></div>
+                    <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte4" class="option">
                         <input type="checkbox" class="checkbox" id="tayte4"/>
                         savuporo
@@ -157,7 +155,7 @@
                     </label>
                   </div>
                   <div class="option">
-                    <div class="tayte-hinta"><h4>2€</h4></div>
+                    <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte6" class="option">
                         <input type="checkbox" class="checkbox" id="tayte6"/>
                         ilmakuivattu porsaanniska (uunin jälkeen)
@@ -207,7 +205,7 @@
                     </label>
                   </div>
                   <div class="option">
-                    <div class="tayte-hinta"><h4>2€</h4></div>
+                    <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte13" class="option">
                         <input type="checkbox" class="checkbox" id="tayte13"/>
                         kantarelli
@@ -225,17 +223,14 @@
             </div>
             <div class="juusto-btn">
                 <select>
-                    <option value="val" selected disabled>-- valitse --</option>
-                    <option value="pal-juusto">Makuparatiisin Juusto</option>
-                    <option value="vah-juusto">Cheddar Juusto</option>
-                    <option value="ei-juusto">Ei Juustoa</option>
+                    <option value="home-juusto">Mozzarella</option>
+                    <option value="vah-juusto">Cheddar</option>
+                    <option value="ei-juusto">Ilman</option>
                 </select>
             </div>
         </div>
         <!--JUUSTO LOPPU-->
-        <div class="tilaa-pos">
-            <button class="tilaa-btn" onclick="window.location.href='ostoskori.html'">Tilaa</button>
-        </div>
+        <button id="fantasiaOstoskoriin" onclick="pizzaJuttu('Fantasia')">Lisää ostoskoriin</button>
     </div>
 <!--SIVUN SISÄLTÖ LOPPU-->
 <!--YLÄ JA ALA OSAN JUTTUJA-->

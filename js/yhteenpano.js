@@ -3,8 +3,10 @@ let kesto = 0;
 
 const hintayhtHtml = document.getElementById("hintayht")
 const tilausKesto = document.getElementById("tilausparagraph")
-const tyhjennaOstoskoriNappi = document.getElementById("tyhjennäOstoskori")
 const otsikko = document.getElementById("otsikko")
+const parentElement = document.querySelector('.tyhjenna');
+const tyhjennaOstoskoriNappi = document.getElementById("tyhjennäOstoskori")
+
 
 const TyhjennaOstoskori = () => {
   if (JSON.parse(localStorage.getItem("pizzaArray")).length > 0) { //estää turhan ostoskori tyhjennysnapin spammin
@@ -16,21 +18,104 @@ const TyhjennaOstoskori = () => {
   }
 }
 
-
 tyhjennaOstoskoriNappi.addEventListener('click', TyhjennaOstoskori);
 
 document.addEventListener("DOMContentLoaded", function () {
 
+  const table = document.createElement("table");
+  parentElement.insertBefore(table, tyhjennaOstoskoriNappi);
+
+  const thead = document.createElement("thead");
+  const headerRow = document.createElement("tr");
+
+  const nimiYlike = document.createElement("th");
+  nimiYlike.textContent = "Tuote";
+
+  const hintaYlike = document.createElement("th");
+  hintaYlike.textContent = "Hinta";
+
+  const kokoYlike = document.createElement("th");
+  kokoYlike.textContent = "Koko"
+
+  const valmisYlike = document.createElement("th")
+  valmisYlike.textContent = "Valmistumisaika"
+
+  const maaraYlike = document.createElement("th");
+  maaraYlike.textContent = "Määrä"
+
+  const poistaYlike = document.createElement("th");
+  poistaYlike.textContent = "Poista";
+
+  headerRow.appendChild(nimiYlike);
+  headerRow.appendChild(hintaYlike);
+  headerRow.appendChild(kokoYlike)
+  headerRow.appendChild(valmisYlike);
+  headerRow.appendChild(maaraYlike)
+  headerRow.appendChild(poistaYlike);
+  thead.appendChild(headerRow);
+  table.appendChild(thead);
+
+  const tbody = document.createElement("tbody");
+  table.appendChild(tbody);
+
   const pizzaArray = JSON.parse(localStorage.getItem("pizzaArray"));
 
   if (pizzaArray && pizzaArray.length > 0) {
-    
+
     tilausKesto.style.display = "";
     tyhjennaOstoskoriNappi.style.display = "";
     hintayhtHtml.style.display = "";
 
     pizzaArray.forEach((dict) => { // päästään dictionaryihin käsiksi, jotka ovat pizza arrayn sisällä
       console.log(dict);
+
+      const rivi = document.createElement("tr");
+      const nimiKohta = document.createElement("td");
+      const hintaKohta = document.createElement("td");
+      const kokoKohta = document.createElement("td");
+      const aikaKohta = document.createElement("td");
+      const maaraKohta = document.createElement("td");
+
+      nimiKohta.textContent = `${dict.nimi}`;
+      hintaKohta.textContent = `${dict.hinta}€`;
+      kokoKohta.textContent = `${dict.koko}`;
+      aikaKohta.textContent = `${dict.paistumisaika} min`;
+      maaraKohta.textContent = `${dict['määrä']}x`;
+
+      const poistaKohta = document.createElement("td");
+      const poistaNappi = document.createElement("button");
+      poistaNappi.textContent = "X";
+      poistaNappi.style.backgroundColor = "transparent"
+
+      poistaNappi.addEventListener("click", function () {
+        hintayhtHtml.textContent = `Yhteishinta: ${(hintayht -= dict.hinta).toFixed(2)}€`;
+        rivi.remove();
+
+        const pizzaArray = JSON.parse(localStorage.getItem("pizzaArray"));
+        const index = pizzaArray.findIndex((item) => item.nimi === dict.nimi && item.koko === dict.koko);
+        pizzaArray.splice(index, 1);
+        localStorage.setItem("pizzaArray", JSON.stringify(pizzaArray));
+        if (pizzaArray.length < 1) {
+          table.remove()
+          tilausKesto.style.display = "none";
+          tyhjennaOstoskoriNappi.style.display = "none";
+          otsikko.textContent = "Sinulla ei ole mitään ostoskorissa";
+          hintayhtHtml.style.display = "none";
+        }
+      });
+
+
+      poistaKohta.appendChild(poistaNappi);
+      rivi.appendChild(nimiKohta);
+      rivi.appendChild(hintaKohta);
+      rivi.appendChild(kokoKohta);
+      rivi.appendChild(aikaKohta)
+      rivi.appendChild(maaraKohta);
+      rivi.appendChild(poistaKohta);
+      tbody.appendChild(rivi);
+
+      document.getElementById("table").appendChild(table);
+
       hintayht += Number(dict.hinta); //Lisätään yhteiseen hintaan dictionaryssa oleva hinta 
       kesto += dict.paistumisaika * dict['määrä']
     });
@@ -59,8 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
     tyhjennaOstoskoriNappi.style.display = "none";
     otsikko.textContent = "Sinulla ei ole mitään ostoskorissa";
     hintayhtHtml.style.display = "none";
-
+    table.remove()
   }
 
 });
-

@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     Maara(null);
 });
 
+localStorage.setItem("Fantasia-maara", 1)
+
 //päivitetään lukumäärä
 function Maara(pizzaNro){
         if(pizzaNro === null){
