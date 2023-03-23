@@ -136,12 +136,12 @@ function pizzaJuttu(pizzaNimi) {
     const pizzaOgHinta = pizzahinnat[pizzaNimi];
     const nimi = pizzaNimi;
     const pizzaHinta = maara * pizzaOgHinta;
-    const koko = 'normaali' // väliaikane kunnes saadaan jotkut checkboxit koolle perkele 
+    const koko = 'Normaali' // väliaikane kunnes saadaan jotkut checkboxit koolle perkele 
     const gluteeniton = false; // true = gluteeniton, false = gluteenia
     let pizzanPaistumisaika = 0;
     let taytteet = []
 
-    if(koko == 'normaali') {
+    if(koko == 'Normaali') {
       pizzanPaistumisaika += 10
     } else {
       pizzanPaistumisaika += 15
