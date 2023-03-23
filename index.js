@@ -134,7 +134,7 @@ function tarkistaSahkoposti() {
 
 function pizzaJuttu(pizzaNimi) {
   const maara = localStorage.getItem(`${pizzaNimi}-maara`);
-  
+
   if (maara > 0) {
     const pizzaOgHinta = pizzahinnat[pizzaNimi];
     const nimi = pizzaNimi;
@@ -143,15 +143,6 @@ function pizzaJuttu(pizzaNimi) {
     const gluteeniton = false; // true = gluteeniton, false = gluteenia
     let pizzanPaistumisaika = 0;
     let taytteet = []
-
-    if(pizzaNimi === 'Fantasia') {
-      checkboxes.forEach(checkbox => {
-        if (checkbox.checked) {
-          const tayte = checkbox.parentElement.textContent.trim();
-          taytteet.push(tayte)
-        }
-      });      
-    }
 
     if(koko == 'Normaali') {
       pizzanPaistumisaika += 10

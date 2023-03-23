@@ -153,6 +153,11 @@ a.article, a.article:hover {
 .li-ostos {
     height:0;
 }
+
+.bg {
+    min-width: 100px;
+}
+
 .otsikko {
     font-size: 50px;
     text-align: center;
@@ -188,11 +193,34 @@ a.article, a.article:hover {
 }
 
 button#tyhjennäOstoskori {
-    background-color: #e30505;
-    border-radius: 4px;
-    height: 40px;
-    width: 160px;
+    background-color: #fff;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.kuljetustavat {
+    background-color: #fff;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#tyhjennäOstoskori:hover {
+    background-color: #c90b0b;
+    color: #fff;
+}
+
 .takaisin-btn {
     color: #e30505;
     border: 1px solid #e30505;
