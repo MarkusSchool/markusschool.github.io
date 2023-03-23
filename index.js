@@ -187,7 +187,7 @@ function pizzaJuttu(pizzaNimi) {
       'koko': koko,
       'paistumisaika': pizzanPaistumisaika,
       'gluteeniton': gluteeniton,
-      'hinta': pizzaHinta,
+      'hinta': pizzaHinta.toFixed(2),
       'täytteet': taytteet
     };
 

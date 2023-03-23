@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hintaKohta.textContent = `${dict.hinta}€`;
       kokoKohta.textContent = `${dict.koko}`;
       gluteenitonKohta.textContent = `${dict.gluteeniton}`
-      aikaKohta.textContent = `${dict.paistumisaika} min`;
+      aikaKohta.textContent = `${dict.paistumisaika * dict['määrä']} min`;
       maaraKohta.textContent = `${dict['määrä']}x`;
 
       const poistaKohta = document.createElement("td");
