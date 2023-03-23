@@ -256,6 +256,14 @@ a.article:hover {
     text-align: right;
     bottom: 40px;
 }
+.koko {
+    max-height: 50px;
+}
+.koko-btn {
+    position: relative;
+    text-align: right;
+    bottom: 40px;
+}
 /* --------------------------------------------------- VALIKKO ----------------------------------------------------- */
 .select-box {
     height: 200px;

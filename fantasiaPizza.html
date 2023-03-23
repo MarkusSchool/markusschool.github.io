@@ -74,18 +74,32 @@
     </div>
     <div class="container">
         <div class="back-pos">
-            <button class="back-btn" onclick="window.location.href='index.html'">Takaisin</button>
+            <button class="back-btn" onclick="window.location.href='pizzanTilausSivu.html'">Takaisin</button>
         </div>
         <!--OTSIKON ALKU-->
         <div class="head1">
             <div>
             <h1>Fantasia Pizza</h1>
             </div>
-            <div class="maara">
-                <h3>#{x}</h3>
+            <div class="maara" id="numOfPizzasContainer">
+                <h3 id="numOfPizzas"></h3>
+            </div>              
+        </div>
+        <!--OTSIKON LOPPU & KOKO ALKU-->
+        <div class="koko">
+            <div class="koko-ot">
+                <h1>Koko</h1>
+            </div>
+            <div class="koko-btn">
+                <select>
+                    <option value="norm">Normaali</option>
+                    <option value="gluteeniton">Iso</option>
+                </select>
             </div>
         </div>
-        <!--OTSIKON LOPPU & POHJA ALKU-->
+        <!--KOKO LOPPU-->
+        <div class="strip-break"></div>
+        <!--POHJA ALKU-->
         <div class="pohja">
             <div class="pohja-ot">
                 <h1 id="otsikko">Pohja</h1>
@@ -295,6 +309,7 @@
     </div>
     </div>
     <!-- Javascript files-->
+    <script src="js/fantasiaPizza.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
