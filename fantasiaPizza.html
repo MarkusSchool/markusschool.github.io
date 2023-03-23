@@ -94,9 +94,9 @@
                 <h1>Koko</h1>
             </div>
             <div class="koko-btn">
-                <select>
+                <select id="kokoSelectit">
                     <option value="perus">Normaali 0€</option>
-                    <option value="iso">Iso 5€</option>
+                    <option value="iso">Iso 3€</option>
                 </select>
             </div>
         </div>
@@ -108,7 +108,7 @@
                 <h1 id="otsikko">Pohja</h1>
             </div>
             <div class="pohja-btn">
-                <select>
+                <select id="pohjaSelectit">
                     <option value="norm">Normaali 0€</option>
                     <option value="gluteeniton">Gluteeniton 2€</option>
                 </select>
@@ -122,7 +122,7 @@
                 <h1 id="otsikko">Kastike</h1>
             </div>
             <div class="kastike-btn">
-                <select>
+                <select id="kastikeSelectit">
                     <option value="ilman">Ilman valkosipulia 0€</option>
                     <option value="valkosipuli">Valkosipulilla 1€</option>
                 </select>
@@ -142,92 +142,85 @@
                   <div class="option">
                     <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte1" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte1"/>
+                        <input type="checkbox" class="checkbox" id="kebabliha"/>
                         kebabliha
                     </label>
                   </div>
                   <div class="option">
                     <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte2" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte2"/>
+                        <input type="checkbox" class="checkbox" id="kinkku"/>
                         kinkku
                     </label>
                   </div>
                   <div class="option">
                     <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte3" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte3"/>
+                        <input type="checkbox" class="checkbox" id="salami"/>
                         salami
                     </label>
                   </div>
                   <div class="option">
                     <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte4" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte4"/>
+                        <input type="checkbox" class="checkbox" id="savuporo"/>
                         savuporo
                     </label>
                   </div>
                   <div class="option">
                     <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte5" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte5"/>
-                        paahdettu pekoni
-                    </label>
-                  </div>
-                  <div class="option">
-                    <div class="tayte-hinta"><h4>1€</h4></div>
-                    <label for="tayte6" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte6"/>
-                        ilmakuivattu porsaanniska (uunin jälkeen)
+                        <input type="checkbox" class="checkbox" id="pekoni"/>
+                        pekoni
                     </label>
                   </div>
                   <div class="option">
                     <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte7" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte7"/>
-                        kana kebabmaustettu
+                        <input type="checkbox" class="checkbox" id="kana"/>
+                        kana
                     </label>
                   </div>
                   <h4>Kasvikset:</h4>
                   <div class="option">
                     <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte8" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte8"/>
+                        <input type="checkbox" class="checkbox" id="ananas"/>
                         ananas
                     </label>
                   </div>
                   <div class="option">
                     <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte9" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte9"/>
+                        <input type="checkbox" class="checkbox" id="jalapeno"/>
                         jalapeno
                     </label>
                   </div>
                   <div class="option">
                     <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte10" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte10"/>
+                        <input type="checkbox" class="checkbox" id="paprika"/>
                         paprika
                     </label>
                   </div>
                   <div class="option">
                     <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte11" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte11"/>
+                        <input type="checkbox" class="checkbox" id="oliivi"/>
                         oliivi
                     </label>
                   </div>
                   <div class="option">
                     <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte12" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte12"/>
+                        <input type="checkbox" class="checkbox" id="herkkusieni"/>
                         herkkusieni
                     </label>
                   </div>
                   <div class="option">
                     <div class="tayte-hinta"><h4>1€</h4></div>
                     <label for="tayte13" class="option">
-                        <input type="checkbox" class="checkbox" id="tayte13"/>
+                        <input type="checkbox" class="checkbox" id="kantarelli"/>
                         kantarelli
                     </label>
                   </div>
@@ -242,7 +235,7 @@
                 <h1 id="otsikko">Juusto Täyte</h1>
             </div>
             <div class="juusto-btn">
-                <select>
+                <select id="juustoSelectit">
                     <option value="mozzarella-juusto">Mozzarella 1€</option>
                     <option value="pal-juusto">Makuparatiisin Juusto 2€</option>
                     <option value="vah-juusto">Cheddar Juusto 1€</option>
