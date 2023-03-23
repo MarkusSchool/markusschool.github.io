@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const checkboxes = document.querySelectorAll('.checkbox');
   const pohjaSelectit = document.querySelector('#pohjaSelectit');
   const kokoSelectit = document.querySelector('#kokoSelectit')
+  const kastikeSelectit = document.querySelector('#kastikeSelectit')
+  const juustoSelectit = document.querySelector('#juustoSelectit')
+  
   const valitutTaytteet = [];
 
   const perusFantasiaHinta = 10.00
