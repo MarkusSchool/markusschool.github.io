@@ -7,7 +7,7 @@ localStorage.setItem("Fantasia-maara", 1)
 //päivitetään lukumäärä
 function Maara(pizzaNro){
         if(pizzaNro === null){
-            localStorage.setItem('Fantasia-maara')
+            localStorage.setItem('fantasia-maara', 0)
             localStorage.setItem('pepperoni-maara', 0);
             localStorage.setItem('tulinen-maara', 0);
             localStorage.setItem('bbq-maara', 0);

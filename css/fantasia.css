@@ -11,7 +11,6 @@
     overflow: none;
     box-shadow: 3px 3px 4px 3px #00000069;
 }
-
 /* --------------------------------------------------- SIDEBAR STYLE ----------------------------------------------------- */
 #sidebar {
     width: 280px;
@@ -42,6 +41,8 @@
     cursor: pointer;
     transition: background-color 0.31s ease;
     text-align: center;
+    position: relative; /* add position property */
+    bottom: -20px; /* adjust top property as needed */
 }
 
 #fantasiaOstoskoriin:hover {
@@ -168,6 +169,7 @@ a.article:hover {
     width: 100%;
     z-index: 1;
     bottom: 0;
+    margin-top: 50px;
 }
 /* --------------------------------------------------- SIVUN KUVA ----------------------------------------------------- */
 .bg {
@@ -252,6 +254,14 @@ a.article:hover {
     max-height: 50px;
 }
 .juusto-btn {
+    position: relative;
+    text-align: right;
+    bottom: 40px;
+}
+.koko {
+    max-height: 50px;
+}
+.koko-btn {
     position: relative;
     text-align: right;
     bottom: 40px;
@@ -341,18 +351,21 @@ a.article:hover {
     left: 10px; /* adjust right property as needed */
     z-index: 5;
 }
-.tilaa-btn {
+.ostos-btn {
+    background-color: #e30505;
     color: #fff;
-    background-color: #d80f0f;
-    border: 1px solid #e30505;
+    border: none;
     border-radius: 5px;
-    padding: 3px 20px;
-    font-size: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: absolute; /* add position property */
-    bottom: -50px; /* adjust top property as needed */
-    right: 10px; /* adjust right property as needed */
-    z-index: 5;
+    transition: background-color 0.31s ease;
+    text-align: right;
+    position: relative; /* add position property */
+    bottom: -20px; /* adjust top property as needed */
+    right: -120px; /* adjust right property as needed */
+}
+.ostos-btn:hover {
+    background-color: #c90b0b;
 }
