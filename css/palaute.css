@@ -51,7 +51,7 @@ input[type="email"] {
 }
 
 textarea {
-    height: 120px;
+    height: 120px; 
 }
 
 button[type="submit"] {

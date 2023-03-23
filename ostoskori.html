@@ -123,9 +123,16 @@
                 <!-- table rows and columns here -->
             </table>
             <select class="kuljetustavat">
-                <option value="Nouto">Nouto</option>
-                <option value="Kuljetus">Kuljetus</option>
+                <option id="Nouto" value="Nouto">Nouto</option>
+                <option id="Kuljetus" value="Kuljetus">Kuljetus</option>
             </select>
+
+            <input id="toimitusosoite" type="text" placeholder="Syötä toimitusosoite">
+
+            <div class="tilaa">
+                <button id="tilaa" type="button" onclick="tilaa()">Tilaa</button>
+            </div>
+
             <div class="tyhjenna">
                 <button id="tyhjennäOstoskori" type="button" onclick="clearShoppingCart()">Tyhjennä ostoskori</button>
             </div>

@@ -7,21 +7,45 @@ const otsikko = document.getElementById("otsikko")
 const parentElement = document.querySelector('.tyhjenna');
 const tyhjennaOstoskoriNappi = document.getElementById("tyhjennäOstoskori")
 const kuljetusTavat = document.querySelector(".kuljetustavat")
+const toimitusosoiteBox = document.getElementById("toimitusosoite")
 
+toimitusosoiteBox.style.display = "none"
+
+kuljetusTavat.onchange = (event) => {
+  let selected = kuljetusTavat.options[kuljetusTavat.selectedIndex].value;
+  if(selected=="Kuljetus") {
+    toimitusosoiteBox.style.display = ""
+  } else {
+    toimitusosoiteBox.style.display = "none";
+  }
+}
 
 const TyhjennaOstoskori = () => {
   if (JSON.parse(localStorage.getItem("pizzaArray")).length > 0) { //estää turhan ostoskori tyhjennysnapin spammin
     localStorage.setItem("pizzaArray", JSON.stringify([]));
-    hintayht = 0
+    hintayht = 0 
     kesto = 0
     otsikko.textContent = "Sinulla ei ole mitään ostoskorissa"
     location.reload();
   }
 }
 
+function tilaa() {
+  table.remove()
+  tilausKesto.style.display = "none";
+  otsikko.textContent = "Kiitos tilauksesta! Palaa etusivulle tilaaksesi uudestaan!";
+  kuljetusTavat.style.display = "none";
+  tilausKesto.style.display = "";
+  tyhjennaOstoskoriNappi.style.display = "none"
+  document.getElementById("tilaa").style.display = "none"
+  localStorage.clear();
+}
+
 tyhjennaOstoskoriNappi.addEventListener('click', TyhjennaOstoskori);
 
 document.addEventListener("DOMContentLoaded", function () {
+  tilausKesto.style.display = "none";
+  document.getElementById("tilaa").style.display = ""
 
   const table = document.createElement("table");
   parentElement.insertBefore(table, tyhjennaOstoskoriNappi);
@@ -108,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
           otsikko.textContent = "Sinulla ei ole mitään ostoskorissa";
           kuljetusTavat.style.display = "none";
           hintayhtHtml.style.display = "none";
+          document.getElementById("tilaa").style.display = "none"
         }
       });
 
@@ -135,15 +160,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Luodaan keston esitys tunteina ja minuutteina
     let kestoEsitys = "";
     if (kestoTunneiksi > 0) {
-      kestoEsitys += `${kestoTunneiksi} tunti(a) `;
+      kestoEsitys += `${kestoTunneiksi} tunnin `;
     }
-    kestoEsitys += `${kestoMinuuteiksi} minuuttia`;
+    kestoEsitys += `${kestoMinuuteiksi} minuutin`;
 
 
     hintayht = Number(hintayht).toFixed(2)
 
     hintayhtHtml.textContent = `Yhteishinta: ${hintayht}€`
-    tilausKesto.textContent = `Tilauksessa kestää noin: ${kestoEsitys}`;
+    localStorage.setItem("kesto", kestoEsitys)
+    tilausKesto.textContent = `Tilauksesi on valmis: ${kestoEsitys} päästä.`;
 
   } else { // kun käyttäjä ei ole laittanut tilaukseen mitään
     tilausKesto.style.display = "none";
@@ -151,6 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
     otsikko.textContent = "Sinulla ei ole mitään ostoskorissa";
     hintayhtHtml.style.display = "none";
     kuljetusTavat.style.display = "none";
+    document.getElementById("tilaa").style.display = "none"
     table.remove()
   }
 
