@@ -218,12 +218,37 @@ button#tyhjennäOstoskori {
     border: 1px solid #ff0000;
     border-radius: 5px;
     padding: 10px 20px;
+    font-size: 16px; 
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    top: 10px;
+}
+
+button#tyhjennäOstoskori:hover {
+    background-color: #c90b0b;
+    color: #fff;
+}
+
+button#tilaa {
+    background-color: #fff;
+    color: #00ff1a;
+    border: 1px solid #4dff00;
+    border-radius: 5px;
+    padding: 10px 50px;
+    left: -45%;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative;
     top: 10px;
+}
+
+button#tilaa:hover {
+    background-color: #28c90b;
+    color: #fff;
 }
 
 .kuljetustavat {
@@ -236,11 +261,6 @@ button#tyhjennäOstoskori {
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-button#tyhjennäOstoskori:hover {
-    background-color: #c90b0b;
-    color: #fff;
 }
 
 .takaisin-btn {
