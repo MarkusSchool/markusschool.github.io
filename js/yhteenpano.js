@@ -38,6 +38,7 @@ function tilaa() {
   tilausKesto.style.display = "";
   tyhjennaOstoskoriNappi.style.display = "none"
   document.getElementById("tilaa").style.display = "none"
+  localStorage.clear();
 }
 
 tyhjennaOstoskoriNappi.addEventListener('click', TyhjennaOstoskori);
@@ -131,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
           otsikko.textContent = "Sinulla ei ole mitään ostoskorissa";
           kuljetusTavat.style.display = "none";
           hintayhtHtml.style.display = "none";
+          document.getElementById("tilaa").style.display = "none"
         }
       });
 
@@ -175,6 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
     otsikko.textContent = "Sinulla ei ole mitään ostoskorissa";
     hintayhtHtml.style.display = "none";
     kuljetusTavat.style.display = "none";
+    document.getElementById("tilaa").style.display = "none"
     table.remove()
   }
 
