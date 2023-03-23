@@ -17,6 +17,16 @@ const pizzahinnat = {
   ['Fantasia']: 10.00
 }
 
+const pizzojenOikeatNimet = {
+  kasvis: 'Vihreä keidas',
+  bbq: 'BBQ Kana',
+  juusto: 'Juustolampi',
+  tulinen: 'Tulinen tulivuori',
+  pepperoni: 'Pepperoni',
+  liha: 'Lihaisa herkku',
+  hawaii: 'Hawaii'
+};
+
 // Funktio, joka tarkistaa, onko käyttäjä kirjautunut ja piilottaa / näyttää sivuston osia sen mukaan
 function onkoKirjautunut() {
 
@@ -135,28 +145,12 @@ function pizzaJuttu(pizzaNimi) {
 
   if (maara > 0) {
     const pizzaOgHinta = pizzahinnat[pizzaNimi];
-    let nimi = pizzaNimi;
+    let nimi = pizzojenOikeatNimet[pizzaNimi] || pizzaNimi;
     let pizzaHinta = maara * pizzaOgHinta;
 
     let pizzanPaistumisaika = 0;
     let taytteet = []
     let koko = 'Normaali'
-
-    if (pizzaNimi == 'kasvis') {
-      nimi = "Vihreä keidas"
-    } else if (pizzaNimi == "bbq") {
-      nimi = "BBQ Kana"
-    } else if (pizzaNimi == "juusto") {
-      nimi = "Juustolampi"
-    } else if (pizzaNimi == "tulinen") {
-      nimi = "Tulinen tulivuori"
-    } else if (pizzaNimi == "pepperoni") {
-      nimi = "Pepperoni"
-    } else if (pizzaNimi == "liha") {
-      nimi = "Lihaisa herkku"
-    } else if (pizzaNimi == "hawaii") {
-      nimi = "Hawaii"
-    }
 
     //console.log(document.getElementById('suuripohja').checkboxObject.value)
 
