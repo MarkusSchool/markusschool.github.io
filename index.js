@@ -1,23 +1,21 @@
 document.addEventListener("DOMContentLoaded", onkoKirjautunut); // Tämä tapahtumankäsittelijä rekisteröidään ajettavaksi, kun DOM on valmis
 
-let pizzaArray = JSON.parse(localStorage.getItem("pizzaArray")); 
+let pizzaArray = JSON.parse(localStorage.getItem("pizzaArray"));
 
 if (!pizzaArray) {
   pizzaArray = [];
 }
 
 const pizzahinnat = {
-  ['liha'] : 12.50,
+  ['liha']: 12.50,
   ['hawaii']: 11.00,
   ['juusto']: 11.30,
   ['kasvis']: 16.80,
   ['bbq']: 11.20,
   ['tulinen']: 12.75,
   ['pepperoni']: 10.50,
-  ['Fantasia'] : 10.00
+  ['Fantasia']: 10.00
 }
-
-const checkboxes = document.querySelectorAll('.checkbox');
 
 // Funktio, joka tarkistaa, onko käyttäjä kirjautunut ja piilottaa / näyttää sivuston osia sen mukaan
 function onkoKirjautunut() {
@@ -138,15 +136,15 @@ function pizzaJuttu(pizzaNimi) {
   if (maara > 0) {
     const pizzaOgHinta = pizzahinnat[pizzaNimi];
     let nimi = pizzaNimi;
-    let pizzaHinta = maara * pizzaOgHinta; 
-    
+    let pizzaHinta = maara * pizzaOgHinta;
+
     let pizzanPaistumisaika = 0;
     let taytteet = []
     let koko = 'Normaali'
 
-    if(pizzaNimi == 'kasvis') {
+    if (pizzaNimi == 'kasvis') {
       nimi = "Vihreä keidas"
-    } else if(pizzaNimi == "bbq") {
+    } else if (pizzaNimi == "bbq") {
       nimi = "BBQ Kana"
     } else if (pizzaNimi == "juusto") {
       nimi = "Juustolampi"
@@ -164,19 +162,18 @@ function pizzaJuttu(pizzaNimi) {
 
     const pohjavalittu = document.getElementById('suuripohja' + pizzaNimi).checked;
     let gluteeniton = document.getElementById('gluteenitonValittu' + pizzaNimi).checked; // true = gluteeniton, false = gluteenia
-    
-    if(pohjavalittu === true){
-      koko = 'Iso';
-    } 
 
-    if(koko == 'Normaali') {
-      pizzanPaistumisaika += 10
-    } else {
-      pizzanPaistumisaika += 15
-      pizzaHinta += 1
+    if (pohjavalittu === true) {
+      koko = 'Iso';
     }
 
-    if(gluteeniton) {
+    if (koko == 'Normaali') {
+      pizzanPaistumisaika += 10
+    } else {
+      pizzanPaistumisaika += 13
+    }
+
+    if (gluteeniton) {
       pizzanPaistumisaika += 3
       pizzaHinta += 2
       gluteeniton = "Kyllä"
@@ -187,11 +184,11 @@ function pizzaJuttu(pizzaNimi) {
     const kokoPizza = {
       'määrä': maara,
       'nimi': nimi,
-      'koko' : koko,
-      'paistumisaika' : pizzanPaistumisaika,
-      'gluteeniton' : gluteeniton,
+      'koko': koko,
+      'paistumisaika': pizzanPaistumisaika,
+      'gluteeniton': gluteeniton,
       'hinta': pizzaHinta,
-      'täytteet' : taytteet
+      'täytteet': taytteet
     };
 
     console.log(kokoPizza);
@@ -202,15 +199,15 @@ function pizzaJuttu(pizzaNimi) {
 
 }
 
-  /*
-  VALMISTUAJAN KAAVAT
+/*
+VALMISTUAJAN KAAVAT
 
-      Pizzojen valmistumisajan kaava:
+    Pizzojen valmistumisajan kaava:
 S
-      peruspizza: norm pohja 10 min, gluteeniton +3 min, lisätäyte + 1 min
+    peruspizza: norm pohja 10 min, gluteeniton +3 min, lisätäyte + 1 min
 
-      ”fantasia”-pizza: norm pohja 7 min, gluteeniton +3min, täytteet + 1 min
+    ”fantasia”-pizza: norm pohja 7 min, gluteeniton +3min, täytteet + 1 min
 
-      Toimitus alle 3 km 5 min, 3-10 km 10min, 10-20km 20min, max 20 km
-      
-  */
+    Toimitus alle 3 km 5 min, 3-10 km 10min, 10-20km 20min, max 20 km
+    
+*/
