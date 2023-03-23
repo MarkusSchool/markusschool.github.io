@@ -8,6 +8,6 @@ document.getElementById("numOfPizzas").innerHTML = numOfPizzas;
 var container = document.getElementById("numOfPizzasContainer");
 
 // hide the container element if numOfPizzas is less than or equal to 1
-if (numOfPizzas <= 1) {
-  container.style.display = "none";
+if (numOfPizzas == 0) {
+  numOfPizzas = 1;
 }
