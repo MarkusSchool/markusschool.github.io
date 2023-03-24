@@ -8,6 +8,7 @@ const parentElement = document.querySelector('.tyhjenna');
 const tyhjennaOstoskoriNappi = document.getElementById("tyhjennäOstoskori")
 const kuljetusTavat = document.querySelector(".kuljetustavat")
 const toimitusosoiteBox = document.getElementById("toimitusosoite")
+const juomat = document.querySelector(".juomat")
 
 toimitusosoiteBox.style.display = "none"
 
@@ -32,12 +33,13 @@ const TyhjennaOstoskori = () => {
 
 function tilaa() {
   table.remove()
-  tilausKesto.style.display = "none";
   otsikko.textContent = "Kiitos tilauksesta! Palaa etusivulle tilaaksesi uudestaan!";
   kuljetusTavat.style.display = "none";
   tilausKesto.style.display = "";
   tyhjennaOstoskoriNappi.style.display = "none"
   document.getElementById("tilaa").style.display = "none"
+  toimitusosoiteBox.style.display = "none"
+  juomat.style.display = "none";
   localStorage.clear();
 }
 
@@ -46,6 +48,7 @@ tyhjennaOstoskoriNappi.addEventListener('click', TyhjennaOstoskori);
 document.addEventListener("DOMContentLoaded", function () {
   tilausKesto.style.display = "none";
   document.getElementById("tilaa").style.display = ""
+  juomat.style.display = "";
 
   const table = document.createElement("table");
   parentElement.insertBefore(table, tyhjennaOstoskoriNappi);
@@ -134,6 +137,8 @@ document.addEventListener("DOMContentLoaded", function () {
           kuljetusTavat.style.display = "none";
           hintayhtHtml.style.display = "none";
           document.getElementById("tilaa").style.display = "none"
+          toimitusosoiteBox.style.display = "none"
+          juomat.style.display = "none";
         }
       });
 
@@ -179,6 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
     hintayhtHtml.style.display = "none";
     kuljetusTavat.style.display = "none";
     document.getElementById("tilaa").style.display = "none"
+    toimitusosoiteBox.style.display = "none"
+    juomat.style.display = "none";
     table.remove()
   }
 
