@@ -281,3 +281,47 @@ button#tilaa:hover {
     background-color: #c90b0b;
     color: #fff;
 }
+/*JUOMAT*/
+.juomat {
+    position: absolute;
+    top: 125px;
+    right: 100px;
+}
+
+.juomat .options-container {
+    padding: 5px;
+    background-color: #ff2424;
+    border-radius: 5px;
+    top: 100px;
+    position: relative;
+    padding-right: 55px;
+    right: -70px;
+}
+
+.selected {
+    color: #111;
+}
+
+label.option {
+    color: #111;
+}
+
+.juomat .option {
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.juoma-hinta {
+    position: absolute;
+    top: 20px;
+    right: -50px;
+}
+
+.option {
+    position: relative;
+}

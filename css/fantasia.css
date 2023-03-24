@@ -369,22 +369,3 @@ a.article:hover {
 .ostos-btn:hover {
     background-color: #c90b0b;
 }
-.maara {
-    display: flex;
-    align-items: center;
-    position: relative;
-    justify-content: center;
-  }
-  
-  .less {
-    font-size: 30px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-  }
-  
-  .more {
-    font-size: 30px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-  }
-  
