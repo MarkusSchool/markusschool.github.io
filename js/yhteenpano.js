@@ -22,7 +22,7 @@ kuljetusTavat.onchange = (event) => {
 }
 
 const TyhjennaOstoskori = () => {
-  if (JSON.parse(localStorage.getItem("pizzaArray")).length > 0) { //estää turhan ostoskori tyhjennysnapin spammin
+  if (JSON.parse(localStorage.getItem("pizzaArray")).length > 0) { //estää turhan ostoskori tyhjennysnapin spammin 
     localStorage.setItem("pizzaArray", JSON.stringify([]));
     hintayht = 0 
     kesto = 0
