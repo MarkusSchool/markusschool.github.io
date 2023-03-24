@@ -119,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       poistaNappi.addEventListener("click", function () {
         hintayhtHtml.textContent = `Yhteishinta: ${(hintayht -= dict.hinta).toFixed(2)}€`;
+        kesto -= dict.paistumisaika * dict['määrä']
         rivi.remove();
 
         const pizzaArray = JSON.parse(localStorage.getItem("pizzaArray"));
