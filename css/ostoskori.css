@@ -290,6 +290,20 @@ button#tilaa:hover {
 
 .juomat .options-container {
     padding: 5px;
+    background-color: #ff2424;
+    border-radius: 5px;
+    top: 100px;
+    position: relative;
+    padding-right: 55px;
+    right: -70px;
+}
+
+.selected {
+    color: #111;
+}
+
+label.option {
+    color: #111;
 }
 
 .juomat .option {
